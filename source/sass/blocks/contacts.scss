@@ -1,0 +1,29 @@
+.contacts {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  @media (min-width: $vp-1920) {
+    gap: 110px;
+  }
+}
+
+.contacts__link {
+  font-family: "PT Mono", "Arial", sans-serif;
+  cursor: pointer;
+  color: $color-text-white;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 16px;
+  line-height: 18px;
+  padding: 10px;
+}
+
+.contacts__link-text {
+  display: none;
+
+  @media (min-width: $vp-1920) {
+    display: block;
+  }
+}
