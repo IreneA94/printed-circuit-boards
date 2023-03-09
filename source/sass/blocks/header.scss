@@ -17,6 +17,11 @@
   }
 }
 
+.header__callback-button-wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
 .header__callback-button {
   display: block;
   color: $color-text-white;
