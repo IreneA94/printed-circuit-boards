@@ -84,5 +84,10 @@
     padding: 14px 12px;
     margin-top: 20px;
   }
+
+  &:hover {
+    background-color: $color-elements-blue;
+    color: $color-text-white;
+  }
 }
 

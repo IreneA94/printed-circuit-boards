@@ -3,7 +3,6 @@
   background-image: url('../../img/welcome-background-mobile.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  z-index: -1;
 
   @media (min-width: $vp-768) {
     background-image: url('../../img/welcome-background-tablet.jpg');
@@ -15,6 +14,7 @@
 }
 
 .welcome__wrapper {
+  position: relative;
   max-width: 1920px;
   margin: 0 auto;
   margin-top: -20px;
@@ -30,6 +30,7 @@
 }
 
 .welcome__header {
+  position: relative;
   margin-top: 0;
   margin-bottom: 20px;
   text-transform: uppercase;
@@ -52,6 +53,7 @@
 }
 
 .welcome__text {
+  position: relative;
   margin-top: 0;
   margin-bottom: 50px;
   font-family: "PT Mono", "Arial", sans-serif;
@@ -74,6 +76,7 @@
 }
 
 .welcome__consultation-button-wrapper {
+  position: relative;
   display: block;
 
   @media (min-width: $vp-768) {
@@ -89,6 +92,7 @@
 }
 
 .welcome__consultation-button {
+  position: relative;
   display: block;
   cursor: pointer;
   background-color: $color-elements-blue;
@@ -105,6 +109,12 @@
   @media (min-width: $vp-768) {
     font-size: 18px;
     line-height: 21px;
+  }
+
+  &:hover {
+    box-shadow: 0 0 0 1px $color-elements-blue;
+    background-color: transparent;
+    color: $color-elements-blue;
   }
 }
 

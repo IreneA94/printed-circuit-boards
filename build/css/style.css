@@ -685,6 +685,11 @@ button,
   margin-top: 10px;
 }
 
+.aboutus__button-more:hover {
+  background-color: #00B2FF;
+  color: #f2f5f6;
+}
+
 .advantages {
   padding: 50px 25px 25px 25px;
 }
@@ -806,6 +811,8 @@ button,
 }
 
 .header {
+  position: relative;
+  z-index: 2;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
   background: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
   background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
@@ -1544,6 +1551,7 @@ button,
 }
 
 .services__item-link-arrow {
+  cursor: pointer;
   position: absolute;
   width: 40px;
   height: 40px;
@@ -1551,6 +1559,14 @@ button,
   border-radius: 3px 0px 0px 0px;
   bottom: 0;
   right: 0;
+  color: #ffffff;
+}
+
+.services__item-link-arrow:hover {
+  background-color: #ffffff;
+  color: #00B2FF;
+  -webkit-box-shadow: 0 0 0 1px #00B2FF;
+  box-shadow: 0 0 0 1px #00B2FF;
 }
 
 .services__item-link-arrow svg {
@@ -1567,10 +1583,10 @@ button,
   background-image: url("../../img/welcome-background-mobile.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  z-index: -1;
 }
 
 .welcome__wrapper {
+  position: relative;
   max-width: 1920px;
   margin: 0 auto;
   margin-top: -20px;
@@ -1578,6 +1594,7 @@ button,
 }
 
 .welcome__header {
+  position: relative;
   margin-top: 0;
   margin-bottom: 20px;
   text-transform: uppercase;
@@ -1589,6 +1606,7 @@ button,
 }
 
 .welcome__text {
+  position: relative;
   margin-top: 0;
   margin-bottom: 50px;
   font-family: "PT Mono", "Arial", sans-serif;
@@ -1602,10 +1620,12 @@ button,
 }
 
 .welcome__consultation-button-wrapper {
+  position: relative;
   display: block;
 }
 
 .welcome__consultation-button {
+  position: relative;
   display: block;
   cursor: pointer;
   background-color: #00B2FF;
@@ -1618,6 +1638,13 @@ button,
   border-radius: 3px;
   letter-spacing: 0.05em;
   text-align: center;
+}
+
+.welcome__consultation-button:hover {
+  -webkit-box-shadow: 0 0 0 1px #00B2FF;
+  box-shadow: 0 0 0 1px #00B2FF;
+  background-color: transparent;
+  color: #00B2FF;
 }
 
 .welcome__consultation-button-mobile-text {
