@@ -1,0 +1,122 @@
+.footer {
+  background-color: $color-header-dark;
+}
+
+.footer__wrapper {
+  max-width: 1920px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 35px 25px 55px 25px;
+
+  @media (min-width: $vp-768) {
+    padding: 50px 50px 65px 50px;
+  }
+
+  @media (min-width: $vp-1920) {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 350px 55px 350px;
+  }
+}
+
+.footer__social {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 30px;
+
+  @media (min-width: $vp-768) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+    gap: 0;
+  }
+
+  @media (min-width: $vp-1920) {
+    display: block;
+    margin-bottom: 0;
+  }
+}
+
+.footer__social-list {
+  display: flex;
+  gap: 25px;
+
+  @media (min-width: $vp-1920) {
+    margin-top: 35px;
+    margin-left: 15px;
+  }
+}
+
+.footer__chapters-title,
+.footer__contacts-title {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  color: $color-default-white;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.footer__menu-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @media (min-width: $vp-768) {
+    flex-direction: row;
+    gap: 110px;
+  }
+
+  @media (min-width: $vp-1920) {
+    gap: 280px;
+  }
+}
+
+.footer__chapters-list {
+  font-family: "PT Mono", "Arial", sans-serif;
+  color: $color-white-transparent;
+  font-size: 16px;
+  line-height: 22px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+
+  @media (min-width: $vp-1920) {
+    max-height: 140px;
+    flex-wrap: wrap;
+    column-gap: 30px;
+  }
+}
+
+.footer__chapters-list-item {
+  @media (min-width: $vp-1920) {
+    max-width: 220px;
+  }
+}
+
+.footer__contacts-list {
+  font-family: "PT Mono", "Arial", sans-serif;
+  color: $color-white-transparent;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.footer__contacts-list-item {
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.footer__contacts-list-item-phone {
+  color: $color-white-transparent;
+  font-size: 16px;
+  line-height: 22px;
+}

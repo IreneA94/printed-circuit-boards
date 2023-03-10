@@ -15,7 +15,7 @@
           <a class="header__logo" href="#">
             <picture>
               <source media="(min-width: 768px)" srcset="img/svg/header-logo.svg" width="215" height="55">
-              <img class="header__logo" src="img/svg/header-logo-small.svg" width="35" height="35" alt="Логотип компании Smart Device.">
+              <img src="img/svg/header-logo-small.svg" width="35" height="35" alt="Логотип компании Smart Device.">
             </picture>
           </a>
           <ul class="contacts clear-list">
@@ -197,7 +197,134 @@
             </ul>
           </div>
         </section>
+        <section class="form">
+          <img class="form__decoration" src="img/airplane.png" width="510" height="285" alt="Иллюстрация к блоку с формой.">
+          <div class="form__wrapper">
+            <div class="form__content-wrapper">
+              <h3 class="form__title">
+                Остались вопросы? Задайте их нам!
+              </h3>
+              <p class="form__text">
+                Мы проконсультируем Вас бесплатно
+              </p>
+              <form class="form__fields-wrapper" action="https://echo.htmlacademy.ru/">
+                <fieldset class="form__fields">
+                  <div class="form__fields-firstline">
+                    <input class="form__input form__input--name" type="text" name="name" required placeholder="Имя">
+                    <input class="form__input form__input--phone" type="text" name="phone" required placeholder="Телефон">
+                  </div>
+                  <textarea class="form__input form__input--textarea" rows="7" name="question" placeholder="Ваш вопрос"></textarea>
+                  <div class="form__ending-wrapper">
+                    <div class="form__button-wrapper">
+                      <button class="form__button" type="submit" href="#">
+                        Задать вопрос
+                      </button>
+                    </div>
+                    <div class="form__checkbox">
+                      <label class="form__checkbox-label" for="form__subscription-policy">
+                        <input class="form__checkbox-input" type="checkbox" id="form__subscription-policy" name="subscription-policy" required checked>
+                        <span class="form__checkbox-mark"></span>
+                        <span class="form__checkbox-text">
+                          Я согласен на обработку<br>
+                          персональных данных
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </section>
       </main>
+      <footer class="footer">
+        <div class="footer__wrapper">
+          <div class="footer__social">
+            <a class="footer__logo" href="#">
+              <img src="img/svg/header-logo.svg" width="215" height="55" alt="Логотип компании Smart Device.">
+            </a>
+            <ul class="footer__social-list clear-list">
+              <li class="footer__social-list-item">
+                <a class="footer__social-list-link">
+                  <svg width="30" height="30" href="#">
+                    <use xlink:href="img/sprite.svg#ok"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__social-list-item">
+                <a class="footer__social-list-link" href="#">
+                  <svg width="30" height="30">
+                    <use xlink:href="img/sprite.svg#vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__social-list-item">
+                <a class="footer__social-list-link" href="#">
+                  <svg width="30" height="30">
+                    <use xlink:href="img/sprite.svg#pinterest"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__menu-wrapper">
+            <div class="footer__chapters">
+              <h4 class="footer__chapters-title">
+                Разделы сайта
+              </h4>
+              <ul class="footer__chapters-list clear-list">
+                <li class="footer__chapters-list-item">
+                  О Компании
+                </li>
+                <li class="footer__chapters-list-item">
+                  Продукты
+                </li>
+                <li class="footer__chapters-list-item">
+                  Производство печатных плат
+                </li>
+                <li class="footer__chapters-list-item">
+                  Монтаж печатных плат
+                </li>
+                <li class="footer__chapters-list-item">
+                  Комплектующие
+                </li>
+                <li class="footer__chapters-list-item">
+                  Доставка
+                </li>
+                <li class="footer__chapters-list-item">
+                  Контакты
+                </li>
+              </ul>
+            </div>
+            <div class="footer__contacts">
+              <h4 class="footer__contacts-title">
+                Наш офис
+              </h4>
+              <ul class="footer__contacts-list clear-list">
+                <li class="footer__contacts-list-item">
+                  г. Мытищи, Олимпийский проспект,<br>
+                  д.10
+                </li>
+                <li class="footer__contacts-list-item">
+                  <a class="footer__contacts-list-item-phone" href="tel:+74955894050">
+                    +7 (495) 589-40-50
+                  </a>
+                </li>
+                <li class="footer__contacts-list-item">
+                  <a class="footer__contacts-list-item-phone" href="tel:+79253895829">
+                    +7 (925) 389-58-29
+                  </a>
+                </li>
+                <li class="footer__contacts-list-item">
+                  <a class="footer__contacts-list-item-phone" href="tel:+79253647813">
+                    +7 (925) 364-78-13
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
 
     <!-- Модалки -->
