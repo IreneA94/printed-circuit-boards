@@ -1,0 +1,51 @@
+.checkbox {
+  margin-top: 25px;
+
+  @media (min-width: $vp-768) {
+    margin: 10px;
+  }
+}
+
+.checkbox-label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox-text {
+  font-family: "PT Mono", "Arial", sans-serif;
+  display: block;
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-default-white;
+  margin: 0;
+}
+
+.checkbox-input[type="checkbox"] {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  outline: none;
+  margin: 0;
+  cursor: pointer;
+}
+
+.checkbox-mark {
+  cursor: pointer;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 7px;
+  transform: translate(-50%, -50%);
+  width: 15px;
+  height: 15px;
+  background-color: $color-background-blue;
+  border: 1px solid $color-default-white;
+}
+
+.checkbox-input[type="checkbox"]:checked + .checkbox-mark {
+  background-image: url('../../img/sprite/checkbox.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}

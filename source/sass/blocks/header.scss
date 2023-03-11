@@ -1,7 +1,10 @@
 .header {
-  position: relative;
-  z-index: 2;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 4;
   background: $header-gradient;
+  width: 100%;
 }
 
 .header__wrapper {
@@ -9,13 +12,15 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px 35px 20px 25px;
+  margin: 0 auto;
+  max-width: 1920px;
 
   @media (min-width: $vp-768) {
     padding: 20px 80px 25px 50px;
   }
 
   @media (min-width: $vp-1920) {
-    padding: 35px 410px 45px 350px;
+    padding: 30px 410px 35px 350px;
   }
 }
 

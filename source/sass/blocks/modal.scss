@@ -59,8 +59,9 @@
   &__content {
     position: relative;
 
-    width: 600px;
+    width: 500px;
     padding: 40px;
+    box-sizing: border-box;
 
     background-color: $color-default-white;
 
@@ -115,5 +116,95 @@
     opacity: 1;
 
     pointer-events: auto;
+  }
+}
+
+.modal__content {
+  background-color: $color-elements-blue;
+}
+
+.modal__title {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 42px;
+  color: $color-default-white;
+  margin-top: 0;
+  margin-bottom: 15px;
+
+  @media (min-width: $vp-768) {
+    font-size: 36px;
+    line-height: 51px;
+  }
+}
+
+.modal__text {
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: $color-default-white;
+  margin-top: 0;
+  margin-bottom: 30px;
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 35px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.modal__fields {
+  border: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.modal__input {
+  font-family: "PT Mono", "Arial", sans-serif;
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  line-height: 22px;
+  background: $color-input-background;
+  border-radius: 3px;
+  color: $color-default-white;
+  outline: none;
+  box-sizing: border-box;
+
+  &--textarea {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  &::placeholder {
+    color: $color-default-white !important;
+  }
+
+  &:focus,
+  &:active {
+    box-shadow: 0 0 0 1px $color-default-white;
+  }
+}
+
+.modal__button {
+  display: block;
+  cursor: pointer;
+  padding: 15px 25px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: $color-header-dark;
+  color: $color-default-white;
+  border-radius: 3px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  &:hover {
+    box-shadow: 0 0 0 1px $color-default-white;;
   }
 }

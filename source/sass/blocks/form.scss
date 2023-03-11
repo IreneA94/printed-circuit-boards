@@ -122,6 +122,11 @@
   &::placeholder {
     color: $color-default-white !important;
   }
+
+  &:focus,
+  &:active {
+    box-shadow: 0 0 0 1px $color-default-white;
+  }
 }
 
 .form__ending-wrapper {
@@ -158,58 +163,4 @@
   @media (min-width: $vp-768) {
     width: 265px;
   }
-}
-
-/*Checkbox*/
-
-.form__checkbox {
-  margin-top: 25px;
-
-  @media (min-width: $vp-768) {
-    margin: 10px;
-  }
-}
-
-.form__checkbox-label {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.form__checkbox-text {
-  font-family: "PT Mono", "Arial", sans-serif;
-  display: block;
-  font-size: 14px;
-  line-height: 16px;
-  color: $color-default-white;
-  margin: 0;
-}
-
-.form__checkbox-input[type="checkbox"] {
-  position: relative;
-  width: 15px;
-  height: 15px;
-  outline: none;
-  margin: 0;
-  cursor: pointer;
-}
-
-.form__checkbox-mark {
-  cursor: pointer;
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 7px;
-  transform: translate(-50%, -50%);
-  width: 15px;
-  height: 15px;
-  background-color: $color-background-blue;
-  border: 1px solid $color-default-white;
-}
-
-.form__checkbox-input[type="checkbox"]:checked + .form__checkbox-mark {
-  background-image: url('../../img/sprite/checkbox.svg');
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
 }

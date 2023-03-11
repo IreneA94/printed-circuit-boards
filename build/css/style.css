@@ -390,6 +390,10 @@ template {
   display: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Roboto Condensed", "Arial", sans-serif;
 }
@@ -780,6 +784,60 @@ button,
   opacity: 0.8;
 }
 
+.checkbox {
+  margin-top: 25px;
+}
+
+.checkbox-label {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox-text {
+  font-family: "PT Mono", "Arial", sans-serif;
+  display: block;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.checkbox-input[type=checkbox] {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  outline: none;
+  margin: 0;
+  cursor: pointer;
+}
+
+.checkbox-mark {
+  cursor: pointer;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 7px;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 15px;
+  height: 15px;
+  background-color: #00b3ff;
+  border: 1px solid #ffffff;
+}
+
+.checkbox-input[type=checkbox]:checked + .checkbox-mark {
+  background-image: url("../../img/sprite/checkbox.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
 .contacts {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -803,7 +861,7 @@ button,
   gap: 15px;
   font-size: 16px;
   line-height: 18px;
-  padding: 10px;
+  padding: 7px;
 }
 
 .contacts__link-text {
@@ -1014,6 +1072,12 @@ button,
   color: #ffffff !important;
 }
 
+.form__input:focus,
+.form__input:active {
+  -webkit-box-shadow: 0 0 0 1px #ffffff;
+  box-shadow: 0 0 0 1px #ffffff;
+}
+
 .form__ending-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1047,68 +1111,15 @@ button,
   box-shadow: 0 0 0 1px #ffffff;
 }
 
-/*Checkbox*/
-
-.form__checkbox {
-  margin-top: 25px;
-}
-
-.form__checkbox-label {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 10px;
-}
-
-.form__checkbox-text {
-  font-family: "PT Mono", "Arial", sans-serif;
-  display: block;
-  font-size: 14px;
-  line-height: 16px;
-  color: #ffffff;
-  margin: 0;
-}
-
-.form__checkbox-input[type=checkbox] {
-  position: relative;
-  width: 15px;
-  height: 15px;
-  outline: none;
-  margin: 0;
-  cursor: pointer;
-}
-
-.form__checkbox-mark {
-  cursor: pointer;
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 7px;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  width: 15px;
-  height: 15px;
-  background-color: #00b3ff;
-  border: 1px solid #ffffff;
-}
-
-.form__checkbox-input[type=checkbox]:checked + .form__checkbox-mark {
-  background-image: url("../../img/sprite/checkbox.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-}
-
 .header {
-  position: relative;
-  z-index: 2;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 4;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
   background: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
   background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+  width: 100%;
 }
 
 .header__wrapper {
@@ -1122,6 +1133,8 @@ button,
   -ms-flex-align: center;
   align-items: center;
   padding: 15px 35px 20px 25px;
+  margin: 0 auto;
+  max-width: 1920px;
 }
 
 .header__callback-button-wrapper {
@@ -1223,8 +1236,10 @@ button,
 
 .modal__content {
   position: relative;
-  width: 600px;
+  width: 500px;
   padding: 40px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   background-color: #ffffff;
 }
 
@@ -1268,6 +1283,107 @@ button,
   visibility: visible;
   opacity: 1;
   pointer-events: auto;
+}
+
+.modal__content {
+  background-color: #00B2FF;
+}
+
+.modal__title {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 42px;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.modal__text {
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.modal__fields {
+  border: none;
+  margin: 0;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.modal__input {
+  font-family: "PT Mono", "Arial", sans-serif;
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  line-height: 22px;
+  background: rgba(4, 20, 39, 0.15);
+  border-radius: 3px;
+  color: #ffffff;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.modal__input--textarea {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.modal__input::-webkit-input-placeholder {
+  color: #ffffff !important;
+}
+
+.modal__input::-moz-placeholder {
+  color: #ffffff !important;
+}
+
+.modal__input:-ms-input-placeholder {
+  color: #ffffff !important;
+}
+
+.modal__input::-ms-input-placeholder {
+  color: #ffffff !important;
+}
+
+.modal__input::placeholder {
+  color: #ffffff !important;
+}
+
+.modal__input:focus,
+.modal__input:active {
+  -webkit-box-shadow: 0 0 0 1px #ffffff;
+  box-shadow: 0 0 0 1px #ffffff;
+}
+
+.modal__button {
+  display: block;
+  cursor: pointer;
+  padding: 15px 25px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #041827;
+  color: #ffffff;
+  border-radius: 3px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.modal__button:hover {
+  -webkit-box-shadow: 0 0 0 1px #ffffff;
+  box-shadow: 0 0 0 1px #ffffff;
 }
 
 .custom-input,
@@ -2050,6 +2166,10 @@ button,
     line-height: 22px;
   }
 
+  .checkbox {
+    margin: 10px;
+  }
+
   .footer__wrapper {
     padding: 50px 50px 65px 50px;
   }
@@ -2115,12 +2235,19 @@ button,
     width: 265px;
   }
 
-  .form__checkbox {
-    margin: 10px;
-  }
-
   .header__wrapper {
     padding: 20px 80px 25px 50px;
+  }
+
+  .modal__title {
+    font-size: 36px;
+    line-height: 51px;
+  }
+
+  .modal__text {
+    margin-bottom: 35px;
+    font-size: 16px;
+    line-height: 22px;
   }
 
   .services {
@@ -2295,7 +2422,7 @@ button,
   }
 
   .header__wrapper {
-    padding: 35px 410px 45px 350px;
+    padding: 30px 410px 35px 350px;
   }
 
   .header__callback-button-wrapper {
