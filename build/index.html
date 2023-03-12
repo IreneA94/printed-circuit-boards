@@ -229,7 +229,7 @@
                   <textarea class="form__input form__input--textarea" rows="7" name="question" placeholder="Ваш вопрос"></textarea>
                   <div class="form__ending-wrapper">
                     <div class="form__button-wrapper">
-                      <button class="form__button" type="submit" href="#">
+                      <button class="form__button" type="submit">
                         Задать вопрос
                       </button>
                     </div>
@@ -259,7 +259,7 @@
             <ul class="footer__social-list clear-list">
               <li class="footer__social-list-item">
                 <a class="footer__social-list-link">
-                  <svg width="30" height="30" href="#">
+                  <svg width="30" height="30">
                     <use xlink:href="img/sprite.svg#ok"></use>
                   </svg>
                 </a>
@@ -378,7 +378,7 @@
               <input class="modal__input modal__input--phone" type="text" name="phone" required placeholder="Телефон">
               <textarea class="modal__input modal__input--textarea" rows="7" name="question" placeholder="Ваш вопрос"></textarea>
               <div>
-                <button class="modal__button" type="submit" href="#">
+                <button class="modal__button" type="submit">
                   Отправить
                 </button>
               </div>
@@ -401,64 +401,6 @@
         </div>
       </div>
     </div>
-
-    <script>
-      function findElements(object, element) {
-        const instance = object;
-        instance.element = element;
-        instance.target = element.nextElementSibling;
-      }
-
-      function hideElement(object) {
-        const instance = object;
-        const { target } = instance;
-        target.style.height = null;
-        instance.isActive = false;
-      }
-
-      function showElement(object) {
-        const instance = object;
-        const { target, height } = instance;
-        target.style.height = `${height}px`;
-        instance.isActive = true;
-      }
-
-      function changeElementStatus(instance) {
-        if (instance.isActive) {
-          hideElement(instance);
-        } else {
-          showElement(instance);
-        }
-      }
-
-      function measureHeight(object) {
-        const instance = object;
-        instance.height = object.target.firstElementChild.clientHeight;
-      }
-
-      function subscribe(instance) {
-        instance.element.addEventListener('click', (event) => {
-          event.preventDefault();
-          changeElementStatus(instance);
-        });
-        window.addEventListener('resize', () => measureHeight(instance));
-      }
-
-      function accordion(element) {
-        const instance = {};
-
-        function init() {
-          findElements(instance, element);
-          measureHeight(instance);
-          subscribe(instance);
-        }
-
-        init();
-      }
-
-      const elements = [...document.querySelectorAll('.js-accordion')];
-      elements.forEach(accordion);
-    </script>
 
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
