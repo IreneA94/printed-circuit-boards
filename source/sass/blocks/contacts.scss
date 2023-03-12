@@ -23,7 +23,7 @@
 .contacts__link-text {
   display: none;
 
-  @media (min-width: $vp-1920) {
+  @media (min-width: $vp-1024) {
     display: block;
   }
 }

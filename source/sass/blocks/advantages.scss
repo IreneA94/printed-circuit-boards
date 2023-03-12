@@ -5,6 +5,10 @@
     padding: 80px 50px 55px 50px;
   }
 
+  @media (min-width: $vp-1024) {
+    padding: 120px 100px 55px 100px;
+  }
+
   @media (min-width: $vp-1920) {
     padding: 120px 350px 55px 350px;
   }
@@ -35,7 +39,7 @@
     padding: 40px 45px;
   }
 
-  @media (min-width: $vp-1920) {
+  @media (min-width: $vp-1024) {
     min-height: 300px;
   }
 

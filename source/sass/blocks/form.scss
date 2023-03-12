@@ -13,7 +13,7 @@
     border-left: 420px solid $color-triangle-grey;
     border-top: 420px solid $color-triangle-grey;
 
-    @media (min-width: $vp-1920) {
+    @media (min-width: $vp-1440) {
       display: block;
     }
   }
@@ -22,11 +22,15 @@
     padding: 50px 50px 125px 50px;
   }
 
-  @media (min-width: $vp-1920) {
+  @media (min-width: $vp-1024) {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     min-height: 840px;
     padding: 0;
+  }
+
+  @media (min-width: $vp-1440) {
+    justify-content: flex-end;
   }
 }
 
@@ -35,10 +39,15 @@
   position: absolute;
   z-index: 2;
   top: 245px;
-  left: 350px;
+
+  @media (min-width: $vp-1440) {
+    display: block;
+    left: 100px;
+  }
 
   @media (min-width: $vp-1920) {
     display: block;
+    left: 350px;
   }
 }
 
@@ -48,6 +57,14 @@
 
 .form__content-wrapper {
   padding: 0;
+
+  @media (min-width: $vp-1024) {
+    padding: 170px 0 0 0;
+  }
+
+  @media (min-width: $vp-1440) {
+    padding: 170px 100px 0 0;
+  }
 
   @media (min-width: $vp-1920) {
     padding: 170px 360px 0 0;

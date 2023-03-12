@@ -13,14 +13,18 @@
   align-items: center;
   padding: 15px 35px 20px 25px;
   margin: 0 auto;
-  max-width: 1920px;
 
   @media (min-width: $vp-768) {
     padding: 20px 80px 25px 50px;
   }
 
+  @media (min-width: $vp-1024) {
+    padding: 30px 100px 35px 100px;
+  }
+
   @media (min-width: $vp-1920) {
     padding: 30px 410px 35px 350px;
+    max-width: 1920px;
   }
 }
 
@@ -49,7 +53,7 @@
 .header__callback-button-wrapper {
   display: none;
 
-  @media (min-width: $vp-1920) {
+  @media (min-width: $vp-1024) {
     display: block;
   }
 }
@@ -57,7 +61,7 @@
 .contacts__link-text {
   display: none;
 
-  @media (min-width: $vp-1920) {
+  @media (min-width: $vp-1024) {
     display: block;
   }
 }

@@ -7,8 +7,12 @@
     padding: 25px 49px 80px 49px;
   }
 
-  @media (min-width: $vp-1920) {
+  @media (min-width: $vp-1024) {
     gap: 100px;
+    padding: 75px 100px 65px 100px;
+  }
+
+  @media (min-width: $vp-1920) {
     padding: 75px 350px 65px 350px;
   }
 }
@@ -42,6 +46,7 @@
   color: $color-header-dark;
   margin-top: 0;
   margin-bottom: 20px;
+  transition: 0.5s;
 
   @media (min-width: $vp-768) {
     font-size: 16px;
@@ -50,19 +55,23 @@
 
   &--hidden {
     display: none;
+  }
+
+  &--mobile-hidden {
+    display: none;
 
     @media (min-width: $vp-768) {
-      display: inline-block;
+      display: inline;
     }
   }
 }
 
-.aboutus__button-more-wrapper {
+.aboutus__button-wrapper {
   display: flex;
   justify-content: flex-start;
 }
 
-.aboutus__button-more {
+.aboutus__button {
   display: block;
   cursor: pointer;
   text-transform: uppercase;
@@ -78,6 +87,7 @@
   box-sizing: border-box;
   border-radius: 3px;
   margin-top: 10px;
+  background-color: $color-default-white;
 
   @media (min-width: $vp-768) {
     width: 180px;
@@ -89,5 +99,8 @@
     background-color: $color-elements-blue;
     color: $color-text-white;
   }
-}
 
+  &--collapse {
+    display: none;
+  }
+}

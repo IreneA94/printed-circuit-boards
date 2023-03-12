@@ -130,16 +130,29 @@
             </p>
             <p class="aboutus__text">
               Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.
-              <span class="aboutus__text--hidden">
+              <span class="aboutus__text--mobile-hidden">
                 Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД),
                 РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники
                 России.
               </span>
             </p>
-            <div class="aboutus__button-more-wrapper">
-              <a class="aboutus__button-more" href="#">
-                Подробнее
-              </a>
+            <p class="aboutus__text aboutus__text--hidden" data-text-status="hidden">
+              Smart Device - это команда профессионалов. Через нас прошло более 1 000 000 клиентов, 70% из которых продолжают
+              сотрудничество по сей день. На данный момент насчитывается более 14 офисов по всей стране и 20 городов присутствия.
+            </p>
+            <p class="aboutus__text aboutus__text--hidden" data-text-status="hidden">
+              Мы стремимся к постоянному развитию и повышению уровня качества продукции, производимой внутри компании.
+              Использование инновационных технологий помогает экономить деньги и время наших клиентов.
+            </p>
+            <div class="aboutus__button-wrapper">
+              <button class="aboutus__button is-closed" type="button">
+                <span class="aboutus__button--more">
+                  Подробнее
+                </span>
+                <span class="aboutus__button--collapse">
+                  Свернуть
+                </span>
+              </button>
             </div>
           </div>
         </section>
@@ -269,9 +282,19 @@
           </div>
           <div class="footer__menu-wrapper">
             <div class="footer__chapters">
-              <h4 class="footer__chapters-title">
-                Разделы сайта
-              </h4>
+              <div class="footer__chapters-title-wrapper js-accordion">
+                <h4 class="footer__chapters-title">
+                  Разделы сайта
+                </h4>
+                <button class="footer__accordeon-button footer__accordeon-button--first">
+                  <svg class="footer__accordeon-icon footer__accordeon-icon--plus" width="15" height="15">
+                    <use xlink:href="img/sprite.svg#plus-icon"></use>
+                  </svg>
+                  <svg class="footer__accordeon-icon footer__accordeon-icon--minus" width="15" height="15">
+                    <use xlink:href="img/sprite.svg#minus-icon"></use>
+                  </svg>
+                </button>
+              </div>
               <ul class="footer__chapters-list clear-list">
                 <li class="footer__chapters-list-item">
                   О Компании
@@ -297,9 +320,19 @@
               </ul>
             </div>
             <div class="footer__contacts">
-              <h4 class="footer__contacts-title">
-                Наш офис
-              </h4>
+              <div class="footer__contacts-title-wrapper js-accordion">
+                <h4 class="footer__contacts-title">
+                  Наш офис
+                </h4>
+                <button class="footer__accordeon-button footer__accordeon-button--second">
+                  <svg class="footer__accordeon-icon footer__accordeon-icon--plus" width="15" height="15">
+                    <use xlink:href="img/sprite.svg#plus-icon"></use>
+                  </svg>
+                  <svg class="footer__accordeon-icon footer__accordeon-icon--minus" width="15" height="15">
+                    <use xlink:href="img/sprite.svg#minus-icon"></use>
+                  </svg>
+                </button>
+              </div>
               <ul class="footer__contacts-list clear-list">
                 <li class="footer__contacts-list-item">
                   г. Мытищи, Олимпийский проспект,<br>
@@ -341,7 +374,7 @@
           </p>
           <form action="https://echo.htmlacademy.ru/">
             <fieldset class="modal__fields">
-              <input class="modal__input modal__input--name" type="text" name="name" required placeholder="Имя" data-status="focused">
+              <input class="modal__input modal__input--name" type="text" name="name" required placeholder="Имя" data-input-status="focused">
               <input class="modal__input modal__input--phone" type="text" name="phone" required placeholder="Телефон">
               <textarea class="modal__input modal__input--textarea" rows="7" name="question" placeholder="Ваш вопрос"></textarea>
               <div>
@@ -368,6 +401,64 @@
         </div>
       </div>
     </div>
+
+    <script>
+      function findElements(object, element) {
+        const instance = object;
+        instance.element = element;
+        instance.target = element.nextElementSibling;
+      }
+
+      function hideElement(object) {
+        const instance = object;
+        const { target } = instance;
+        target.style.height = null;
+        instance.isActive = false;
+      }
+
+      function showElement(object) {
+        const instance = object;
+        const { target, height } = instance;
+        target.style.height = `${height}px`;
+        instance.isActive = true;
+      }
+
+      function changeElementStatus(instance) {
+        if (instance.isActive) {
+          hideElement(instance);
+        } else {
+          showElement(instance);
+        }
+      }
+
+      function measureHeight(object) {
+        const instance = object;
+        instance.height = object.target.firstElementChild.clientHeight;
+      }
+
+      function subscribe(instance) {
+        instance.element.addEventListener('click', (event) => {
+          event.preventDefault();
+          changeElementStatus(instance);
+        });
+        window.addEventListener('resize', () => measureHeight(instance));
+      }
+
+      function accordion(element) {
+        const instance = {};
+
+        function init() {
+          findElements(instance, element);
+          measureHeight(instance);
+          subscribe(instance);
+        }
+
+        init();
+      }
+
+      const elements = [...document.querySelectorAll('.js-accordion')];
+      elements.forEach(accordion);
+    </script>
 
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>

@@ -135,7 +135,7 @@ export class Modals {
 
   open(modalName = this._modalName) {
     const modal = document.querySelector(`[data-modal="${modalName}"]`);
-    const inputFocused = document.querySelector('[data-status="focused"]');
+    const inputFocused = modal.querySelector('[data-input-status="focused"]');
 
     if (!modal || modal.classList.contains('is-active')) {
       return;
@@ -152,7 +152,6 @@ export class Modals {
 
     this._setSettings(modalName);
     modal.classList.add('is-active');
-    inputFocused.focus();
 
     if (!this._openedModalElement) {
       this._scrollLock.disableScrolling();
@@ -170,6 +169,7 @@ export class Modals {
       this._addListeners(modal);
       this._autoPlay(modal);
       document.addEventListener('click', this._documentClickHandler);
+      inputFocused.focus();
     }, this._eventTimeout);
   }
 
