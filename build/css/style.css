@@ -655,17 +655,23 @@ button,
   color: #041827;
   margin-top: 0;
   margin-bottom: 20px;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
 }
 
 .aboutus__text--hidden {
-  display: none;
+  overflow: hidden;
+  height: 0;
+  -webkit-transition: height 0.5s;
+  -o-transition: height 0.5s;
+  transition: height 0.5s;
 }
 
 .aboutus__text--mobile-hidden {
   display: none;
+  overflow: hidden;
+  height: 0;
+  -webkit-transition: height 0.5s;
+  -o-transition: height 0.5s;
+  transition: height 0.5s;
 }
 
 .aboutus__button-wrapper {
@@ -2157,7 +2163,8 @@ button,
   }
 
   .aboutus__illustration {
-    display: inline-block;
+    display: block;
+    height: 320px;
   }
 
   .aboutus__title {
@@ -2171,7 +2178,8 @@ button,
   }
 
   .aboutus__text--mobile-hidden {
-    display: inline;
+    display: block;
+    height: auto;
   }
 
   .aboutus__button {

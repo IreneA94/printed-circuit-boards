@@ -21,7 +21,8 @@
   display: none;
 
   @media (min-width: $vp-768) {
-    display: inline-block;
+    display: block;
+    height: 320px;
   }
 }
 
@@ -46,7 +47,6 @@
   color: $color-header-dark;
   margin-top: 0;
   margin-bottom: 20px;
-  transition: 0.5s;
 
   @media (min-width: $vp-768) {
     font-size: 16px;
@@ -54,14 +54,20 @@
   }
 
   &--hidden {
-    display: none;
+    overflow: hidden;
+    height: 0;
+	  transition: height 0.5s;
   }
 
   &--mobile-hidden {
     display: none;
+    overflow: hidden;
+    height: 0;
+	  transition: height 0.5s;
 
     @media (min-width: $vp-768) {
-      display: inline;
+      display: block;
+      height: auto;
     }
   }
 }

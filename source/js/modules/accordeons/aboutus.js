@@ -1,8 +1,8 @@
 const aboutUsButton = document.querySelector('.aboutus__button');
 const aboutUsButtonMore = document.querySelector('.aboutus__button--more');
 const aboutUsButtonCollapse = document.querySelector('.aboutus__button--collapse');
-const mobileHiddenText = document.querySelector('.aboutus__text--mobile-hidden');
-const hiddenTexts = document.querySelectorAll('[data-text-status="hidden"]');
+const mobileHiddenText = document.querySelector('[data-text-status="mobile-hidden"]');
+const hiddenText = document.querySelector('[data-text-status="hidden"]');
 
 const textToggle = () => {
 
@@ -11,24 +11,29 @@ const textToggle = () => {
     aboutUsButton.classList.add('is-opened');
     aboutUsButtonMore.style.display = 'none';
     aboutUsButtonCollapse.style.display = 'block';
-    for (let i = 0; i < hiddenTexts.length; i++) {
-      hiddenTexts[i].style.display = 'block';
+    if (window.innerWidth >= 1920) {
+      hiddenText.style.height = '150px';
+    } else if ((window.innerWidth <= 1920) && (window.innerWidth >= 1024)) {
+      hiddenText.style.height = '220px';
+    } else if ((window.innerWidth <= 1024) && (window.innerWidth >= 768)) {
+      hiddenText.style.height = '240px';
+    } else {
+      hiddenText.style.height = '340px';
     }
     if (window.innerWidth < 768) {
-      mobileHiddenText.style.display = 'inline';
+      mobileHiddenText.style.height = '130px';
     }
   } else {
     aboutUsButton.classList.remove('is-opened');
     aboutUsButton.classList.add('is-closed');
     aboutUsButtonCollapse.style.display = 'none';
     aboutUsButtonMore.style.display = 'block';
-    for (let i = 0; i < hiddenTexts.length; i++) {
-      hiddenTexts[i].style.display = 'none';
-    }
+    hiddenText.style.height = null;
     if (window.innerWidth < 768) {
-      mobileHiddenText.style.display = 'none';
+      mobileHiddenText.style.height = null;
     } else {
-      mobileHiddenText.style.display = 'inline';
+      mobileHiddenText.style.display = 'block';
+      mobileHiddenText.style.height = '100%';
     }
   }
 };
