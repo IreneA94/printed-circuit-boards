@@ -879,7 +879,7 @@ button,
   gap: 15px;
   font-size: 16px;
   line-height: 18px;
-  padding: 7px;
+  padding: 5px 5px 10px 0;
 }
 
 .contacts__link-text {
@@ -938,7 +938,7 @@ button,
   border-top: 1px solid rgba(255, 255, 255, 0.7);
 }
 
-.footer__contacts-title-wrapper {
+.footer__contacts {
   border-bottom: 1px solid rgba(255, 255, 255, 0.7);
 }
 
@@ -974,12 +974,24 @@ button,
   flex-direction: column;
 }
 
+.footer__chapters-list-wrapper {
+  overflow: hidden;
+  height: 0;
+  -webkit-transition: height 0.5s;
+  -o-transition: height 0.5s;
+  transition: height 0.5s;
+}
+
 .footer__chapters-list {
   font-family: "PT Mono", "Arial", sans-serif;
   color: rgba(255, 255, 255, 0.7);
   font-size: 16px;
   line-height: 22px;
-  padding: 0 25px;
+  padding: 0 25px 15px 25px;
+  margin-top: -5px;
+}
+
+.footer__contacts-list-wrapper {
   overflow: hidden;
   height: 0;
   -webkit-transition: height 0.5s;
@@ -992,12 +1004,8 @@ button,
   color: rgba(255, 255, 255, 0.7);
   font-size: 16px;
   line-height: 22px;
-  padding: 0 25px;
-  overflow: hidden;
-  height: 0;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  padding: 0 25px 15px 25px;
+  margin-top: -5px;
 }
 
 .footer__contacts-list-item {
@@ -1098,7 +1106,7 @@ button,
 .form__input--textarea {
   margin-top: 20px;
   width: 100%;
-  margin-bottom: 35px;
+  margin-bottom: 20px;
 }
 
 .form__input::-webkit-input-placeholder {
@@ -1201,7 +1209,8 @@ button,
   font-size: 14px;
   line-height: 16px;
   font-weight: 700;
-  padding: 10px 15px;
+  padding: 10px 20px;
+  margin-bottom: 10px;
   border: 1px solid #f2f5f6;
   border-radius: 3px;
 }
@@ -2170,6 +2179,7 @@ button,
   .aboutus__title {
     font-size: 36px;
     line-height: 51px;
+    margin-bottom: 10px;
   }
 
   .aboutus__text {
@@ -2205,6 +2215,7 @@ button,
   .advantages__icon {
     width: 35px;
     height: 35px;
+    margin-bottom: 20px;
   }
 
   .advantages__title {
@@ -2245,7 +2256,7 @@ button,
     border: none;
   }
 
-  .footer__contacts-title-wrapper {
+  .footer__contacts {
     border: none;
   }
 
@@ -2270,6 +2281,11 @@ button,
     padding: 0;
   }
 
+  .footer__chapters-list-wrapper {
+    overflow: visible;
+    height: auto;
+  }
+
   .footer__chapters-list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2280,13 +2296,17 @@ button,
     flex-direction: column;
     row-gap: 10px;
     padding: 0;
+    margin-top: 0;
+  }
+
+  .footer__contacts-list-wrapper {
     overflow: visible;
     height: auto;
   }
 
   .footer__contacts-list {
     padding: 0;
-    overflow: visible;
+    margin-top: 0;
   }
 
   .form {
@@ -2299,7 +2319,7 @@ button,
   }
 
   .form__text {
-    margin-bottom: 35px;
+    margin-bottom: 30px;
     font-size: 16px;
     line-height: 22px;
   }
@@ -2443,6 +2463,8 @@ button,
 
   .advantages__item {
     min-height: 300px;
+    min-width: 595px;
+    padding: 40px 40px;
   }
 
   .contacts__link-text {
@@ -2541,7 +2563,7 @@ button,
   .welcome__header {
     font-size: 80px;
     line-height: 94px;
-    margin-bottom: 40px;
+    margin-bottom: 36px;
   }
 
   .welcome__consultation-button-wrapper {
@@ -2586,7 +2608,8 @@ button,
 
 @media (min-width: 1920px) {
   .aboutus {
-    padding: 75px 350px 65px 350px;
+    gap: 95px;
+    padding: 65px 350px 93px 350px;
   }
 
   .advantages {
@@ -2598,7 +2621,7 @@ button,
   }
 
   .footer__wrapper {
-    padding: 50px 350px 55px 350px;
+    padding: 60px 390px 54px 350px;
   }
 
   .form__decoration {
@@ -2607,7 +2630,8 @@ button,
   }
 
   .form__content-wrapper {
-    padding: 170px 360px 0 0;
+    padding: 170px 385px 0 0;
+    min-width: 580px;
   }
 
   .header__wrapper {
@@ -2626,7 +2650,7 @@ button,
   }
 
   .welcome__wrapper {
-    padding: 185px 425px 280px 475px;
+    padding: 200px 425px 242px 475px;
   }
 }
 

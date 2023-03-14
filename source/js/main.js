@@ -2,6 +2,8 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {aboutUsButtonClick} from './modules/accordeons/aboutus';
+import {accordionRealisation} from './modules/accordeons/footer';
+import {phoneMask} from './modules/validation/phone-mask';
 
 // ---------------------------------
 
@@ -23,6 +25,8 @@ window.addEventListener('DOMContentLoaded', () => {
     window.form = form;
     form.init();
     aboutUsButtonClick();
+    accordionRealisation();
+    phoneMask();
   });
 });
 

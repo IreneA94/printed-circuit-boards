@@ -19,7 +19,7 @@
   }
 
   @media (min-width: $vp-1920) {
-    padding: 50px 350px 55px 350px;
+    padding: 60px 390px 54px 350px;
   }
 }
 
@@ -69,7 +69,7 @@
   }
 }
 
-.footer__contacts-title-wrapper {
+.footer__contacts {
   border-bottom: 1px solid $color-white-transparent;
 
   @media (min-width: $vp-768) {
@@ -131,23 +131,31 @@
   }
 }
 
+.footer__chapters-list-wrapper {
+  overflow: hidden;
+	height: 0;
+	transition: height 0.5s;
+
+  @media (min-width: $vp-768) {
+    overflow: visible;
+    height: auto;
+  }
+}
+
 .footer__chapters-list {
   font-family: "PT Mono", "Arial", sans-serif;
   color: $color-white-transparent;
   font-size: 16px;
   line-height: 22px;
-  padding: 0 25px;
-  overflow: hidden;
-	height: 0;
-	transition: height 0.5s;
+  padding: 0 25px 15px 25px;
+  margin-top: -5px;
 
   @media (min-width: $vp-768) {
     display: flex;
     flex-direction: column;
     row-gap: 10px;
     padding: 0;
-    overflow: visible;
-    height: auto;
+    margin-top: 0;
   }
 
   @media (min-width: $vp-1440) {
@@ -163,19 +171,28 @@
   }
 }
 
+.footer__contacts-list-wrapper {
+  overflow: hidden;
+	height: 0;
+	transition: height 0.5s;
+
+  @media (min-width: $vp-768) {
+    overflow: visible;
+    height: auto;
+  }
+}
+
 .footer__contacts-list {
   font-family: "PT Mono", "Arial", sans-serif;
   color: $color-white-transparent;
   font-size: 16px;
   line-height: 22px;
-  padding: 0 25px;
-  overflow: hidden;
-	height: 0;
-	transition: 0.5s;
+  padding: 0 25px 15px 25px;
+  margin-top: -5px;
 
   @media (min-width: $vp-768) {
     padding: 0;
-    overflow: visible;
+    margin-top: 0;
   }
 }
 

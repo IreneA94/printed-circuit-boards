@@ -67,7 +67,8 @@
   }
 
   @media (min-width: $vp-1920) {
-    padding: 170px 360px 0 0;
+    padding: 170px 385px 0 0;
+    min-width: 580px;
   }
 }
 
@@ -94,7 +95,7 @@
   margin-bottom: 30px;
 
   @media (min-width: $vp-768) {
-    margin-bottom: 35px;
+    margin-bottom: 30px;
     font-size: 16px;
     line-height: 22px;
   }
@@ -133,7 +134,7 @@
   &--textarea {
     margin-top: 20px;
     width: 100%;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
   }
 
   &::placeholder {
