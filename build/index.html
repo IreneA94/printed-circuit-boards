@@ -73,7 +73,7 @@
                   <use href="img/sprite.svg#clock"></use>
                 </svg>
                 <h3 class="advantages__title">
-                  Оперативные поставщики
+                  Оперативные сроки
                 </h3>
                 <p class="advantages__text">
                   Усовершенствованная логистическая система позволяет нам просчитывать стоимость,
@@ -224,32 +224,43 @@
               <p class="form__text">
                 Мы&nbsp;проконсультируем Вас бесплатно
               </p>
-              <form action="https://echo.htmlacademy.ru/" data-form-validate>
-                <fieldset class="form__fields">
-                  <div class="form__fields-firstline">
-                    <input class="form__input form__input--name" type="text" name="name" required placeholder="Имя">
-                    <input class="form__input form__input--phone" type="text" name="phone" required placeholder="Телефон" data-input-type="phone">
-                  </div>
-                  <textarea class="form__input form__input--textarea" rows="6" name="question" placeholder="Ваш вопрос"></textarea>
-                  <div class="form__ending-wrapper">
-                    <div class="form__button-wrapper">
-                      <button class="form__button" type="submit">
-                        Задать вопрос
-                      </button>
+              <div data-form-validate="data-form-validate" data-callback="base">
+                <form action="https://echo.htmlacademy.ru/" method="post">
+                  <fieldset class="form__fields">
+                    <div class="form__fields-firstline">
+                      <div data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required>
+                        <label class="visually-hidden" for="form-name">Поле ввода имени</label>
+                        <input class="form__input form__input--name" type="text" name="name" id="form-name" required placeholder="Имя">
+                      </div>
+                      <div class="is-valid" data-validate-type="phone" data-on-input-validate="" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-message-success="Поле заполнено верно" data-required="">
+                        <label class="visually-hidden" for="form-phone">Поле ввода телефона</label>
+                        <input class="form__input form__input--phone" type="text" name="phone" id="form-phone" required placeholder="Телефон">
+                      </div>
                     </div>
-                    <div class="checkbox">
-                      <label class="checkbox-label" for="form__subscription-policy">
-                        <input class="checkbox-input" type="checkbox" id="form__subscription-policy" name="subscription-policy" required checked>
-                        <span class="checkbox-mark"></span>
-                        <span class="checkbox-text">
-                          Я&nbsp;согласен на&nbsp;обработку<br>
-                          персональных данных
-                        </span>
-                      </label>
+                    <div data-validate-type="text">
+                      <label class="visually-hidden" for="form-question">Поле ввода вопроса</label>
+                      <textarea class="form__input form__input--textarea" rows="6" name="question" id="form-question" placeholder="Ваш вопрос"></textarea>
                     </div>
-                  </div>
-                </fieldset>
-              </form>
+                    <div class="form__ending-wrapper">
+                      <div class="form__button-wrapper">
+                        <button class="form__button" type="submit">
+                          Задать вопрос
+                        </button>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-label" for="form__subscription-policy">
+                          <input class="checkbox-input" type="checkbox" id="form__subscription-policy" name="subscription-policy" required checked>
+                          <span class="checkbox-mark"></span>
+                          <span class="checkbox-text">
+                            Я&nbsp;согласен на&nbsp;обработку<br>
+                            персональных данных
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </form>
+              </div>
             </div>
           </div>
         </section>
@@ -284,7 +295,7 @@
               </li>
             </ul>
           </div>
-          <div class="footer__menu-wrapper" data-accordion="parent">
+          <div class="footer__menu-wrapper" data-accordion="parent" data-single>
             <div class="footer__chapters" data-accordion="element">
               <div class="footer__chapters-title-wrapper">
                 <h4 class="footer__chapters-title">
@@ -383,7 +394,7 @@
     </div>
 
     <!-- Модалки -->
-    <div class="modal modal--preload" data-modal="feedback" data-form-validate>
+    <div class="modal modal--preload" data-modal="feedback">
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
@@ -394,27 +405,38 @@
             Оставьте контакты, мы&nbsp;проконсультируем<br>
             вас бесплатно в&nbsp;удобное время
           </p>
-          <form action="https://echo.htmlacademy.ru/">
-            <fieldset class="modal__fields">
-              <input class="modal__input modal__input--name" type="text" name="name" required placeholder="Имя" data-input-status="focused">
-              <input class="modal__input modal__input--phone" type="text" name="phone" required placeholder="Телефон" data-input-type="phone">
-              <textarea class="modal__input modal__input--textarea" rows="7" name="question" placeholder="Ваш вопрос"></textarea>
-              <div>
-                <button class="modal__button" type="submit">
-                  Отправить
-                </button>
-              </div>
-              <div class="checkbox">
-                <label class="checkbox-label" for="modal__subscription-policy">
-                  <input class="checkbox-input" type="checkbox" id="modal__subscription-policy" name="subscription-policy" required checked>
-                  <span class="checkbox-mark"></span>
-                  <span class="checkbox-text">
-                    Я&nbsp;согласен на&nbsp;обработку персональных данных
-                  </span>
-                </label>
-              </div>
-            </fieldset>
-          </form>
+          <div data-form-validate="data-form-validate" data-callback="base">
+            <form action="https://echo.htmlacademy.ru/" method="post">
+              <fieldset class="modal__fields">
+                <div data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required>
+                  <label class="visually-hidden" for="modal-form-name">Поле ввода имени</label>
+                  <input class="modal__input modal__input--name" type="text" name="name" id="modal-form-name" required placeholder="Имя" data-input-status="focused">
+                </div>
+                <div class="is-valid" data-validate-type="phone" data-on-input-validate="" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-message-success="Поле заполнено верно" data-required="">
+                  <label class="visually-hidden" for="modal-form-phone">Поле ввода телефона</label>
+                  <input class="modal__input modal__input--phone" type="text" name="phone" id="modal-form-phone" required placeholder="Телефон">
+                </div>
+                <div data-validate-type="text">
+                  <label class="visually-hidden" for="modal-form-question">Поле ввода вопроса</label>
+                  <textarea class="modal__input modal__input--textarea" rows="7" name="question" id="modal-form-question" placeholder="Ваш вопрос"></textarea>
+                </div>
+                <div>
+                  <button class="modal__button" type="submit">
+                    Отправить
+                  </button>
+                </div>
+                <div class="checkbox">
+                  <label class="checkbox-label" for="modal__subscription-policy">
+                    <input class="checkbox-input" type="checkbox" id="modal__subscription-policy" name="subscription-policy" required checked>
+                    <span class="checkbox-mark"></span>
+                    <span class="checkbox-text">
+                      Я&nbsp;согласен на&nbsp;обработку персональных данных
+                    </span>
+                  </label>
+                </div>
+              </fieldset>
+            </form>
+          </div>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
             <svg width="20" height="20">
               <use xlink:href="img/sprite.svg#icon-close"></use>

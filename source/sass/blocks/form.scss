@@ -69,8 +69,8 @@
   }
 
   @media (min-width: $vp-1920) {
-    padding: 170px 385px 0 0;
-    min-width: 580px;
+    padding: 170px 355px 0 0;
+    min-width: 940px;
     max-width: 960px;
   }
 }
@@ -133,6 +133,7 @@
   color: $color-default-white;
   outline: none;
   box-sizing: border-box;
+  width: 100%;
 
   &--textarea {
     margin-top: 20px;
@@ -162,10 +163,6 @@
 
   @media (min-width: $vp-1440) {
     gap: 40px;
-  }
-
-  @media (min-width: $vp-1920) {
-    gap: 50px;
   }
 }
 
