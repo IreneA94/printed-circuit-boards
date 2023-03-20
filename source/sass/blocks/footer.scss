@@ -47,11 +47,41 @@
 
 .footer__social-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 25px;
+  max-width: 250px;
+
+  @media (min-width: $vp-768) {
+    max-width: 360px;
+  }
 
   @media (min-width: $vp-1024) {
     margin-top: 35px;
     margin-left: 15px;
+    max-width: 170px;
+  }
+}
+
+.footer__social-list-link-icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+.footer__social-list-link {
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  outline: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    box-shadow: 0 0 10px 3px $color-default-white;
+    outline: none;
   }
 }
 
@@ -168,6 +198,19 @@
 .footer__chapters-list-item {
   @media (min-width: $vp-1024) {
     max-width: 220px;
+  }
+}
+
+.footer__chapters-list-item-link {
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  color: $color-white-transparent;
+
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 0.5;
   }
 }
 

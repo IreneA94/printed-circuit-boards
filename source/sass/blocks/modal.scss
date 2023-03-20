@@ -38,7 +38,7 @@
     align-items: center;
     width: 100%;
     min-height: 100%;
-    padding: 60px 40px;
+    padding: 20px 40px;
 
     @include vp-767 {
       padding: 60px 16px;
@@ -73,6 +73,7 @@
 
   &__close-btn {
     position: absolute;
+    outline: none;
     top: 22px;
     right: 22px;
     z-index: 1;
@@ -191,6 +192,7 @@
 .modal__button {
   display: block;
   cursor: pointer;
+  user-select: none;
   padding: 15px 25px;
   width: 100%;
   box-sizing: border-box;
@@ -203,8 +205,12 @@
   text-align: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  outline: none;
 
-  &:hover {
-    box-shadow: 0 0 0 1px $color-default-white;;
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+    box-shadow: 0 0 0 1px $color-default-white;
   }
 }

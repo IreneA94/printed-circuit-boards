@@ -35,6 +35,7 @@
 
 .header__callback-button {
   display: block;
+  user-select: none;
   color: $color-text-white;
   text-transform: uppercase;
   font-size: 14px;
@@ -44,8 +45,12 @@
   margin-bottom: 10px;
   border: 1px solid $color-text-white;
   border-radius: 3px;
+  outline: none;
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
     background-color: $color-text-white;
     color: $color-header-dark;
   }

@@ -60,15 +60,18 @@
 
   @media (min-width: $vp-1024) {
     padding: 170px 0 0 0;
+    max-width: 555px;
   }
 
   @media (min-width: $vp-1440) {
     padding: 170px 100px 0 0;
+    max-width: 650px;
   }
 
   @media (min-width: $vp-1920) {
     padding: 170px 385px 0 0;
     min-width: 580px;
+    max-width: 960px;
   }
 }
 
@@ -156,11 +159,20 @@
     gap: 50px;
     align-items: center;
   }
+
+  @media (min-width: $vp-1440) {
+    gap: 40px;
+  }
+
+  @media (min-width: $vp-1920) {
+    gap: 50px;
+  }
 }
 
 .form__button {
   display: block;
   cursor: pointer;
+  user-select: none;
   padding: 15px 25px;
   width: 100%;
   box-sizing: border-box;
@@ -173,9 +185,13 @@
   text-align: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  outline: none;
 
-  &:hover {
-    box-shadow: 0 0 0 1px $color-default-white;;
+  &:hover,
+  &:focus,
+  &:active {
+    box-shadow: 0 0 0 1px $color-default-white;
+    outline: none;
   }
 
   @media (min-width: $vp-768) {

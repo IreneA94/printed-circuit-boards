@@ -41,8 +41,12 @@
 
   @media (min-width: $vp-1024) {
     min-height: 300px;
-    min-width: 595px;
+    min-width: 395px;
     padding: 40px 40px;
+  }
+
+  @media (min-width: $vp-1440) {
+    min-width: 595px;
   }
 
 

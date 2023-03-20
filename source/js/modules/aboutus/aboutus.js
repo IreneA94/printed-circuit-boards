@@ -11,12 +11,8 @@ const textToggle = () => {
     aboutUsButton.classList.add('is-opened');
     aboutUsButtonMore.style.display = 'none';
     aboutUsButtonCollapse.style.display = 'block';
-    if (window.innerWidth >= 1920) {
-      hiddenText.style.height = '150px';
-    } else if ((window.innerWidth <= 1920) && (window.innerWidth >= 1024)) {
-      hiddenText.style.height = '220px';
-    } else if ((window.innerWidth <= 1024) && (window.innerWidth >= 768)) {
-      hiddenText.style.height = '240px';
+    if (window.innerWidth >= 768) {
+      hiddenText.style.height = `${hiddenText.previousElementSibling.clientHeight}px`;
     } else {
       hiddenText.style.height = '340px';
     }

@@ -1,36 +1,20 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
-import {aboutUsButtonClick} from './modules/accordeons/aboutus';
-import {accordionRealisation} from './modules/accordeons/footer';
-import {phoneMask} from './modules/validation/phone-mask';
-
-// ---------------------------------
+import {aboutUsButtonClick} from './modules/aboutus/aboutus';
+import {initAccordions} from './modules/accordeon/init-accordion';
 
 window.addEventListener('DOMContentLoaded', () => {
-
-  // Utils
-  // ---------------------------------
-
   iosVhFix();
-
-  // Modules
-  // ---------------------------------
-
-  // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
-  // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
     const form = new Form();
     window.form = form;
     form.init();
+    initAccordions();
     aboutUsButtonClick();
-    accordionRealisation();
-    phoneMask();
   });
 });
-
-// ---------------------------------
 
 // ❗❗❗ обязательно установите плагины eslint, stylelint, editorconfig в редактор кода.
 

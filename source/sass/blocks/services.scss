@@ -135,13 +135,17 @@
   bottom: 0;
   right: 0;
   color: $color-default-white;
+  outline: none;
 
   @media (min-width: $vp-768) {
     width: 60px;
     height: 60px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
     background-color: $color-default-white;;
     color: $color-elements-blue;
     box-shadow: 0 0 0 1px $color-elements-blue;

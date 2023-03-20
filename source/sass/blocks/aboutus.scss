@@ -82,6 +82,7 @@
 .aboutus__button {
   display: block;
   cursor: pointer;
+  user-select: none;
   text-transform: uppercase;
   border: 1px solid $color-elements-blue;
   font-weight: 700;
@@ -96,6 +97,8 @@
   border-radius: 3px;
   margin-top: 10px;
   background-color: $color-default-white;
+  box-sizing: border-box;
+  outline: none;
 
   @media (min-width: $vp-768) {
     width: 180px;
@@ -103,9 +106,18 @@
     margin-top: 20px;
   }
 
-  &:hover {
+  &:focus {
+    outline: none;
+    border: 1px solid $color-header-dark;
+    color: $color-header-dark;
+  }
+
+  &:hover,
+  &:active {
+    outline: none;
     background-color: $color-elements-blue;
     color: $color-text-white;
+    border: 1px solid $color-elements-blue;
   }
 
   &--collapse {

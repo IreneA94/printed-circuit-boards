@@ -49,3 +49,8 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
+
+.checkbox-input[type="checkbox"]:hover + .checkbox-mark,
+.checkbox-input[type="checkbox"]:focus + .checkbox-mark {
+  box-shadow: 0 0 0 1px $color-default-white;
+}
