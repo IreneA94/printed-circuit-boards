@@ -1182,6 +1182,7 @@ button,
 }
 
 .form__input {
+  cursor: pointer;
   font-family: "PT Mono", "Arial", sans-serif;
   border: none;
   padding: 13px 15px;
@@ -1224,6 +1225,7 @@ button,
   color: #ffffff;
 }
 
+.form__input:hover,
 .form__input:focus,
 .form__input:active {
   -webkit-box-shadow: 0 0 0 1px #ffffff;
@@ -1475,6 +1477,7 @@ button,
 }
 
 .modal__input {
+  cursor: pointer;
   font-family: "PT Mono", "Arial", sans-serif;
   border: none;
   padding: 15px;
@@ -1514,6 +1517,7 @@ button,
   color: #ffffff;
 }
 
+.modal__input:hover,
 .modal__input:focus,
 .modal__input:active {
   -webkit-box-shadow: 0 0 0 1px #ffffff;

@@ -157,6 +157,7 @@
 }
 
 .modal__input {
+  cursor: pointer;
   font-family: "PT Mono", "Arial", sans-serif;
   border: none;
   padding: 15px;
@@ -178,6 +179,7 @@
     color: $color-default-white;
   }
 
+  &:hover,
   &:focus,
   &:active {
     box-shadow: 0 0 0 1px $color-default-white;
