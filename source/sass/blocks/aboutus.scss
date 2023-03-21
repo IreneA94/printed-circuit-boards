@@ -1,10 +1,10 @@
 .aboutus {
-  padding: 25px 25px 80px 25px;
+  padding: 18px 25px 80px 25px;
 
   @media (min-width: $vp-768) {
     display: flex;
     gap: 30px;
-    padding: 25px 49px 80px 49px;
+    padding: 22px 49px 77px 49px;
   }
 
   @media (min-width: $vp-1024) {
@@ -14,7 +14,7 @@
 
   @media (min-width: $vp-1920) {
     gap: 95px;
-    padding: 65px 350px 93px 350px;
+    padding: 40px 350px 93px 350px;
   }
 }
 
@@ -53,19 +53,20 @@
   @media (min-width: $vp-768) {
     font-size: 16px;
     line-height: 22px;
+    margin-bottom: 20px;
   }
 
   &--hidden {
     overflow: hidden;
     height: 0;
-	  transition: height 0.5s;
+    transition: height 0.5s;
   }
 
   &--mobile-hidden {
     display: none;
     overflow: hidden;
     height: 0;
-	  transition: height 0.5s;
+    transition: height 0.5s;
 
     @media (min-width: $vp-768) {
       display: block;
@@ -92,10 +93,9 @@
   letter-spacing: 0.05em;
   color: $color-elements-blue;
   padding: 8px 14px 12px 14px;
-  width: 130px;
-  box-sizing: border-box;
+  width: 160px;
   border-radius: 3px;
-  margin-top: 10px;
+  margin-top: -10px;
   background-color: $color-default-white;
   box-sizing: border-box;
   outline: none;
@@ -103,6 +103,10 @@
   @media (min-width: $vp-768) {
     width: 180px;
     padding: 14px 12px;
+    margin-top: 0;
+  }
+
+  @media (min-width: $vp-1024) {
     margin-top: 20px;
   }
 

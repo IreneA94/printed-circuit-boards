@@ -1,16 +1,16 @@
 .welcome {
   position: relative;
-  background-image: url('../../img/welcome-background-mobile.jpg');
+  background-image: url("../../img/welcome-background-mobile.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-color: $color-background-blue;
 
   @media (min-width: $vp-768) {
-    background-image: url('../../img/welcome-background-tablet.jpg');
+    background-image: url("../../img/welcome-background-tablet.jpg");
   }
 
   @media (min-width: $vp-1024) {
-    background-image: url('../../img/welcome-background-desktop.jpg');
+    background-image: url("../../img/welcome-background-desktop.jpg");
   }
 }
 
@@ -19,7 +19,7 @@
   max-width: 1920px;
   margin: 0 auto;
   margin-top: -20px;
-  padding: 80px 25px 190px 25px;
+  padding: 100px 25px 190px 25px;
 
   @media (min-width: $vp-768) {
     padding: 100px 110px 205px 50px;
@@ -37,7 +37,7 @@
 .welcome__header {
   position: relative;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   text-transform: uppercase;
   color: $color-text-white;
   font-weight: 700;
@@ -61,7 +61,7 @@
 .welcome__text {
   position: relative;
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 44px;
   font-family: "PT Mono", "Arial", sans-serif;
   font-size: 14px;
   line-height: 21px;
@@ -113,7 +113,7 @@
   font-size: 14px;
   line-height: 16px;
   font-weight: 700;
-  padding: 15px 25px;
+  padding: 12px 25px;
   border-radius: 3px;
   letter-spacing: 0.05em;
   text-align: center;
@@ -124,6 +124,7 @@
     font-size: 18px;
     line-height: 21px;
     max-width: 410px;
+    padding: 15px 25px;
   }
 
   &:hover {

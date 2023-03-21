@@ -33,7 +33,7 @@
 
 .checkbox-mark {
   cursor: pointer;
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 7px;
@@ -45,7 +45,7 @@
 }
 
 .checkbox-input[type="checkbox"]:checked + .checkbox-mark {
-  background-image: url('../../img/sprite/checkbox.svg');
+  background-image: url("../../img/sprite/checkbox.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }

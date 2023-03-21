@@ -11,11 +11,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 35px 20px 25px;
+  padding: 15px 40px 20px 25px;
   margin: 0 auto;
 
   @media (min-width: $vp-768) {
-    padding: 20px 80px 25px 50px;
+    padding: 20px 75px 25px 50px;
   }
 
   @media (min-width: $vp-1024) {
@@ -29,8 +29,12 @@
 }
 
 .header__callback-button-wrapper {
-  display: flex;
-  justify-content: flex-start;
+  display: none;
+
+  @media (min-width: $vp-1024) {
+    display: flex;
+    justify-content: flex-start;
+  }
 }
 
 .header__callback-button {
@@ -53,14 +57,6 @@
     outline: none;
     background-color: $color-text-white;
     color: $color-header-dark;
-  }
-}
-
-.header__callback-button-wrapper {
-  display: none;
-
-  @media (min-width: $vp-1024) {
-    display: block;
   }
 }
 

@@ -1,17 +1,17 @@
 .form {
   position: relative;
   background-color: $color-background-blue;
-  padding: 50px 25px 90px 25px;
+  padding: 50px 25px 85px 25px;
 
   &::after {
     display: none;
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
-    border: 420px solid transparent;
-    border-left: 420px solid $color-triangle-grey;
-    border-top: 420px solid $color-triangle-grey;
+    border: 450px solid transparent;
+    border-left: 530px solid $color-triangle-grey;
+    border-top: 390px solid $color-triangle-grey;
 
     @media (min-width: $vp-1440) {
       display: block;
@@ -81,11 +81,16 @@
   line-height: 42px;
   color: $color-default-white;
   margin-top: 0;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 
   @media (min-width: $vp-768) {
     font-size: 36px;
     line-height: 51px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $vp-1024) {
+    margin-bottom: 15px;
   }
 }
 
@@ -125,7 +130,7 @@
 .form__input {
   font-family: "PT Mono", "Arial", sans-serif;
   border: none;
-  padding: 15px;
+  padding: 13px 15px;
   font-size: 16px;
   line-height: 22px;
   background: $color-input-background;
@@ -137,12 +142,24 @@
 
   &--textarea {
     margin-top: 20px;
+    height: 184px;
     width: 100%;
     margin-bottom: 20px;
+    padding-top: 30px;
+
+    @media (min-width: $vp-768) {
+      height: 152px;
+      margin-bottom: 28px;
+    }
+
+    @media (min-width: $vp-1024) {
+      height: auto;
+      margin-bottom: 10px;
+    }
   }
 
   &::placeholder {
-    color: $color-default-white !important;
+    color: $color-default-white;
   }
 
   &:focus,
@@ -157,8 +174,12 @@
 
   @media (min-width: $vp-768) {
     flex-direction: row;
-    gap: 50px;
+    gap: 75px;
     align-items: center;
+  }
+
+  @media (min-width: $vp-1024) {
+    gap: 50px;
   }
 
   @media (min-width: $vp-1440) {
@@ -193,5 +214,10 @@
 
   @media (min-width: $vp-768) {
     width: 265px;
+    padding: 15px 25px 10px 25px;
+  }
+
+  @media (min-width: $vp-1024) {
+    padding: 15px 25px;
   }
 }

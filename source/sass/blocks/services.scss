@@ -3,7 +3,7 @@
   background-color: $color-header-dark;
 
   @media (min-width: $vp-768) {
-    padding: 60px 50px 75px 50px;
+    padding: 56px 50px 75px 50px;
   }
 
   @media (min-width: $vp-1024) {
@@ -17,7 +17,7 @@
 
 .services__title {
   margin-top: 0;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
   font-weight: 400;
   font-size: 28px;
   line-height: 39px;
@@ -26,6 +26,10 @@
   @media (min-width: $vp-768) {
     font-size: 36px;
     line-height: 51px;
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: $vp-1024) {
     margin-bottom: 50px;
   }
 
@@ -69,38 +73,38 @@
   min-height: 250px;
 
   &--1 {
-    background-image: url('../../img/service-mobile-1.jpg');
+    background-image: url("../../img/service-mobile-1.jpg");
 
     @media (min-width: $vp-768) {
-      background-image: url('../../img/service-tablet-1.jpg');
+      background-image: url("../../img/service-tablet-1.jpg");
     }
 
     @media (min-width: $vp-1024) {
-      background-image: url('../../img/service-1.jpg');
+      background-image: url("../../img/service-1.jpg");
     }
   }
 
   &--2 {
-    background-image: url('../../img/service-mobile-2.jpg');
+    background-image: url("../../img/service-mobile-2.jpg");
 
     @media (min-width: $vp-768) {
-      background-image: url('../../img/service-tablet-2.jpg');
+      background-image: url("../../img/service-tablet-2.jpg");
     }
 
     @media (min-width: $vp-1024) {
-      background-image: url('../../img/service-2.jpg');
+      background-image: url("../../img/service-2.jpg");
     }
   }
 
   &--3 {
-    background-image: url('../../img/service-mobile-3.jpg');
+    background-image: url("../../img/service-mobile-3.jpg");
 
     @media (min-width: $vp-768) {
-      background-image: url('../../img/service-tablet-3.jpg');
+      background-image: url("../../img/service-tablet-3.jpg");
     }
 
     @media (min-width: $vp-1024) {
-      background-image: url('../../img/service-3.jpg');
+      background-image: url("../../img/service-3.jpg");
     }
   }
 
@@ -125,13 +129,29 @@
   }
 }
 
+.services__hyphenation {
+  &--tablet {
+    @media (min-width: $vp-1024) {
+      display: none;
+    }
+  }
+
+  &--desktop {
+    display: none;
+
+    @media (min-width: $vp-1024) {
+      display: block;
+    }
+  }
+}
+
 .services__item-link-arrow {
   cursor: pointer;
   position: absolute;
   width: 40px;
   height: 40px;
   background-color: $color-elements-blue;
-  border-radius: 3px 0px 0px 0px;
+  border-radius: 3px 0 0 0;
   bottom: 0;
   right: 0;
   color: $color-default-white;
@@ -146,7 +166,7 @@
   &:focus,
   &:active {
     outline: none;
-    background-color: $color-default-white;;
+    background-color: $color-default-white;
     color: $color-elements-blue;
     box-shadow: 0 0 0 1px $color-elements-blue;
   }

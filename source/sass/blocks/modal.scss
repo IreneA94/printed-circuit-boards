@@ -58,12 +58,10 @@
 
   &__content {
     position: relative;
-
+    background-color: $color-elements-blue;
     width: 500px;
     padding: 40px;
     box-sizing: border-box;
-
-    background-color: $color-default-white;
 
     @include vp-767 {
       width: 100%;
@@ -118,10 +116,6 @@
 
     pointer-events: auto;
   }
-}
-
-.modal__content {
-  background-color: $color-elements-blue;
 }
 
 .modal__title {
@@ -181,7 +175,7 @@
   }
 
   &::placeholder {
-    color: $color-default-white !important;
+    color: $color-default-white;
   }
 
   &:focus,

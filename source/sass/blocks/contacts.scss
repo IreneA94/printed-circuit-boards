@@ -3,7 +3,11 @@
   flex-wrap: wrap;
   max-width: 715px;
   align-items: center;
-  gap: 30px;
+  gap: 35px;
+
+  @media (min-width: $vp-768) {
+    gap: 30px;
+  }
 
   @media (min-width: $vp-1920) {
     gap: 110px;
