@@ -7,6 +7,12 @@
     <meta name="description" content="Описание проекта">
     <title>Smart Device Main</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/ptmono.woff" as="font">
+    <link rel="preload" href="fonts/ptmono.woff2" as="font">
+    <link rel="preload" href="fonts/robotocondensed.woff" as="font">
+    <link rel="preload" href="fonts/robotocondensed.woff2" as="font">
+    <link rel="preload" href="fonts/robotocondensedbold.woff" as="font">
+    <link rel="preload" href="fonts/robotocondensedbold.woff2" as="font">
   </head>
   <body>
     <div class="wrapper">
@@ -118,42 +124,42 @@
           </div>
         </section>
         <section class="aboutus" id="aboutus">
-          <img class="aboutus__illustration" src="img/2022.png" srcset="img/2022@2x.png 2x" width="150" height="320" alt="Текущий год.">
+          <img class="aboutus__illustration" src="img/2022.webp" srcset="img/2022@2x.webp 2x" width="150" height="320" alt="Текущий год.">
           <div class="aboutus__content">
             <h2 class="aboutus__title">
               О&nbsp;компании
             </h2>
-            <div class="aboutus__text--visible">
-              <p class="aboutus__text">
+            <div class="aboutus__text-wrapper">
+              <p>
                 Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые технологии с&nbsp;1997 года.
                 Выполняем срочные заказы и&nbsp;пилотные образцы до&nbsp;10 дней.
               </p>
-              <p class="aboutus__text">
+              <p>
                 Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.
-                <span class="aboutus__text--mobile-hidden" data-text-status="mobile-hidden">
+                <span data-text-status="mobile-hidden">
                   Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных Дорог (РЖД),
                   РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники
                   России.
                 </span>
               </p>
             </div>
-            <div class="aboutus__text--hidden" data-text-status="hidden">
-              <p class="aboutus__text">
+            <div class="aboutus__text-wrapper aboutus__text-wrapper--hidden" data-text-status="hidden">
+              <p>
                 Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более 1&nbsp;000&nbsp;000 клиентов, 70%
                 из&nbsp;которых продолжают сотрудничество по&nbsp;сей день. На&nbsp;данный момент насчитывается более 14 офисов
                 по&nbsp;всей стране и&nbsp;20 городов присутствия.
               </p>
-              <p class="aboutus__text">
+              <p>
                 Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению уровня качества продукции, производимой внутри
                 компании. Использование инновационных технологий помогает экономить деньги и&nbsp;время наших клиентов.
               </p>
             </div>
             <div class="aboutus__button-wrapper">
               <button class="aboutus__button is-closed" type="button">
-                <span class="aboutus__button--more">
+                <span class="aboutus__button-text aboutus__button-text--more">
                   Подробнее
                 </span>
-                <span class="aboutus__button--collapse">
+                <span class="aboutus__button-text aboutus__button-text--collapse">
                   Свернуть
                 </span>
               </button>
@@ -163,11 +169,11 @@
         <section class="services" id="services">
           <div class="services__wrapper">
             <h2 class="services__title">
-              <span class="services__title--mobile">
+              <span class="services__title-text services__title-text--mobile">
                 Товары и&nbsp;услуги<br>
                 Smart Device
               </span>
-              <span class="services__title--desktop">
+              <span class="services__title-text services__title-text--desktop">
                 Smart Device предлагает следующие товары и&nbsp;услуги
               </span>
             </h2>
@@ -216,7 +222,7 @@
           </div>
         </section>
         <section class="form" id="form__section">
-          <img class="form__decoration" src="img/airplane.png" width="510" height="285" alt="Иллюстрация к блоку с формой.">
+          <img class="form__decoration" src="img/airplane.webp" srcset="img/airplane@2x.webp 2x" width="510" height="285" alt="Иллюстрация к блоку с формой.">
           <div class="form__wrapper">
             <div class="form__content-wrapper">
               <h3 class="form__title">
@@ -231,16 +237,16 @@
                     <div class="form__fields-firstline">
                       <div data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required>
                         <label class="visually-hidden" for="form-name">Поле ввода имени</label>
-                        <input class="form__input form__input--name" type="text" name="name" id="form-name" required placeholder="Имя">
+                        <input type="text" name="name" id="form-name" required placeholder="Имя">
                       </div>
                       <div class="is-valid" data-validate-type="phone" data-on-input-validate="" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-message-success="Поле заполнено верно" data-required="">
                         <label class="visually-hidden" for="form-phone">Поле ввода телефона</label>
-                        <input class="form__input form__input--phone" type="text" name="phone" id="form-phone" required placeholder="Телефон">
+                        <input type="tel" name="phone" id="form-phone" required placeholder="Телефон">
                       </div>
                     </div>
                     <div data-validate-type="text">
                       <label class="visually-hidden" for="form-question">Поле ввода вопроса</label>
-                      <textarea class="form__input form__input--textarea" rows="6" name="question" id="form-question" placeholder="Ваш вопрос"></textarea>
+                      <textarea rows="6" name="question" id="form-question" placeholder="Ваш вопрос"></textarea>
                     </div>
                     <div class="form__ending-wrapper">
                       <div class="form__button-wrapper">
@@ -249,10 +255,10 @@
                         </button>
                       </div>
                       <div class="checkbox">
-                        <label class="checkbox-label" for="form__subscription-policy">
-                          <input class="checkbox-input" type="checkbox" id="form__subscription-policy" name="subscription-policy" required checked>
-                          <span class="checkbox-mark"></span>
-                          <span class="checkbox-text">
+                        <label class="checkbox__label">
+                          <input class="checkbox__input" type="checkbox" name="subscription-policy" required checked>
+                          <span class="checkbox__mark"></span>
+                          <span class="checkbox__text">
                             Я&nbsp;согласен на&nbsp;обработку<br>
                             персональных данных
                           </span>
@@ -412,15 +418,15 @@
               <fieldset class="modal__fields">
                 <div data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required>
                   <label class="visually-hidden" for="modal-form-name">Поле ввода имени</label>
-                  <input class="modal__input modal__input--name" type="text" name="name" id="modal-form-name" required placeholder="Имя" data-input-status="focused">
+                  <input type="text" name="name" id="modal-form-name" required placeholder="Имя" data-input-status="focused">
                 </div>
                 <div class="is-valid" data-validate-type="phone" data-on-input-validate="" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-message-success="Поле заполнено верно" data-required="">
                   <label class="visually-hidden" for="modal-form-phone">Поле ввода телефона</label>
-                  <input class="modal__input modal__input--phone" type="text" name="phone" id="modal-form-phone" required placeholder="Телефон">
+                  <input type="tel" name="phone" id="modal-form-phone" required placeholder="Телефон">
                 </div>
                 <div data-validate-type="text">
                   <label class="visually-hidden" for="modal-form-question">Поле ввода вопроса</label>
-                  <textarea class="modal__input modal__input--textarea" rows="7" name="question" id="modal-form-question" placeholder="Ваш вопрос"></textarea>
+                  <textarea rows="7" name="question" id="modal-form-question" placeholder="Ваш вопрос"></textarea>
                 </div>
                 <div>
                   <button class="modal__button" type="submit">
@@ -428,10 +434,10 @@
                   </button>
                 </div>
                 <div class="checkbox">
-                  <label class="checkbox-label" for="modal__subscription-policy">
-                    <input class="checkbox-input" type="checkbox" id="modal__subscription-policy" name="subscription-policy" required checked>
-                    <span class="checkbox-mark"></span>
-                    <span class="checkbox-text">
+                  <label class="checkbox__label">
+                    <input class="checkbox__input" type="checkbox" name="subscription-policy" required checked>
+                    <span class="checkbox__mark"></span>
+                    <span class="checkbox__text">
                       Я&nbsp;согласен на&nbsp;обработку персональных данных
                     </span>
                   </label>

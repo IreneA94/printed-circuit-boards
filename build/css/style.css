@@ -10,12 +10,6 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
-@import url("https://fonts.googleapis.com/css2?family=PT+Mono&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap");
-
 html {
   line-height: 1.15;
   /* 1 */
@@ -404,6 +398,30 @@ body {
   list-style-type: none;
 }
 
+@font-face {
+  font-family: "PT Mono";
+  src: url("../../fonts/ptmono.woff2") format("woff2"), url("../../fonts/ptmono.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("../../fonts/robotocondensed.woff2") format("woff2"), url("../../fonts/robotocondensed.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("../../fonts/robotocondensedbold.woff2") format("woff2"), url("../../fonts/robotocondensedbold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 *,
 *::before,
 *::after {
@@ -648,7 +666,7 @@ button,
   color: #041827;
 }
 
-.aboutus__text {
+.aboutus__text-wrapper p {
   font-family: "PT Mono", "Arial", sans-serif;
   font-size: 14px;
   line-height: 19px;
@@ -657,7 +675,8 @@ button,
   margin-bottom: 20px;
 }
 
-.aboutus__text--hidden {
+.aboutus__text-wrapper span {
+  display: none;
   overflow: hidden;
   height: 0;
   -webkit-transition: height 0.5s;
@@ -665,8 +684,7 @@ button,
   transition: height 0.5s;
 }
 
-.aboutus__text--mobile-hidden {
-  display: none;
+.aboutus__text-wrapper--hidden {
   overflow: hidden;
   height: 0;
   -webkit-transition: height 0.5s;
@@ -722,7 +740,7 @@ button,
   border: 1px solid #00b2ff;
 }
 
-.aboutus__button--collapse {
+.aboutus__button-text--collapse {
   display: none;
 }
 
@@ -755,8 +773,8 @@ button,
   box-sizing: border-box;
 }
 
-.advantages__item:nth-child(3),
-.advantages__item:nth-child(4) {
+.advantages__item:nth-last-child(2),
+.advantages__item:last-child {
   min-height: 325px;
   padding: 30px 40px 20px 25px;
 }
@@ -767,18 +785,18 @@ button,
   color: #f2f5f6;
 }
 
-.advantages__item:hover > .advantages__title,
-.advantages__item:hover > .advantages__text {
+.advantages__item:hover > h3,
+.advantages__item:hover > p {
   color: #f2f5f6;
 }
 
-.advantages__icon {
+.advantages__item svg {
   width: 30px;
   height: 30px;
   margin-bottom: 10px;
 }
 
-.advantages__title {
+.advantages__item h3 {
   margin-top: 0;
   margin-bottom: 10px;
   color: #00b2ff;
@@ -787,7 +805,7 @@ button,
   font-weight: 400;
 }
 
-.advantages__text {
+.advantages__item p {
   margin: 0;
   font-family: "PT Mono", "Arial", sans-serif;
   font-size: 14px;
@@ -826,7 +844,7 @@ button,
   margin-top: 25px;
 }
 
-.checkbox-label {
+.checkbox__label {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -837,7 +855,7 @@ button,
   gap: 10px;
 }
 
-.checkbox-text {
+.checkbox__text {
   font-family: "PT Mono", "Arial", sans-serif;
   display: block;
   font-size: 14px;
@@ -846,7 +864,7 @@ button,
   margin: 0;
 }
 
-.checkbox-input[type=checkbox] {
+.checkbox__input[type=checkbox] {
   position: relative;
   width: 15px;
   height: 15px;
@@ -855,7 +873,7 @@ button,
   cursor: pointer;
 }
 
-.checkbox-mark {
+.checkbox__mark {
   cursor: pointer;
   content: "";
   position: absolute;
@@ -870,14 +888,14 @@ button,
   border: 1px solid #ffffff;
 }
 
-.checkbox-input[type=checkbox]:checked + .checkbox-mark {
-  background-image: url("../../img/sprite/checkbox.svg");
+.checkbox__input[type=checkbox]:checked + .checkbox__mark {
+  background-image: url("../img/sprite/checkbox.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
 
-.checkbox-input[type=checkbox]:hover + .checkbox-mark,
-.checkbox-input[type=checkbox]:focus + .checkbox-mark {
+.checkbox__input[type=checkbox]:hover + .checkbox__mark,
+.checkbox__input[type=checkbox]:focus + .checkbox__mark {
   -webkit-box-shadow: 0 0 0 1px #ffffff;
   box-shadow: 0 0 0 1px #ffffff;
 }
@@ -1034,6 +1052,10 @@ button,
   cursor: pointer;
 }
 
+.footer__accordeon-icon .is-active {
+  display: block;
+}
+
 .footer__accordeon-icon--minus {
   display: none;
 }
@@ -1170,18 +1192,8 @@ button,
   padding: 0;
 }
 
-.form__fields-firstline {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.form__input {
+.form__fields input,
+.form__fields textarea {
   cursor: pointer;
   font-family: "PT Mono", "Arial", sans-serif;
   border: none;
@@ -1197,7 +1209,42 @@ button,
   width: 100%;
 }
 
-.form__input--textarea {
+.form__fields input::-webkit-input-placeholder,
+.form__fields textarea::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.form__fields input::-moz-placeholder,
+.form__fields textarea::-moz-placeholder {
+  color: #ffffff;
+}
+
+.form__fields input:-ms-input-placeholder,
+.form__fields textarea:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.form__fields input::-ms-input-placeholder,
+.form__fields textarea::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.form__fields input::placeholder,
+.form__fields textarea::placeholder {
+  color: #ffffff;
+}
+
+.form__fields input:hover,
+.form__fields input:focus,
+.form__fields input:active,
+.form__fields textarea:hover,
+.form__fields textarea:focus,
+.form__fields textarea:active {
+  -webkit-box-shadow: 0 0 0 1px #ffffff;
+  box-shadow: 0 0 0 1px #ffffff;
+}
+
+.form__fields textarea {
   margin-top: 20px;
   height: 184px;
   width: 100%;
@@ -1205,31 +1252,15 @@ button,
   padding-top: 30px;
 }
 
-.form__input::-webkit-input-placeholder {
-  color: #ffffff;
-}
-
-.form__input::-moz-placeholder {
-  color: #ffffff;
-}
-
-.form__input:-ms-input-placeholder {
-  color: #ffffff;
-}
-
-.form__input::-ms-input-placeholder {
-  color: #ffffff;
-}
-
-.form__input::placeholder {
-  color: #ffffff;
-}
-
-.form__input:hover,
-.form__input:focus,
-.form__input:active {
-  -webkit-box-shadow: 0 0 0 1px #ffffff;
-  box-shadow: 0 0 0 1px #ffffff;
+.form__fields-firstline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .form__ending-wrapper {
@@ -1476,7 +1507,8 @@ button,
   gap: 20px;
 }
 
-.modal__input {
+.modal__fields input,
+.modal__fields textarea {
   cursor: pointer;
   font-family: "PT Mono", "Arial", sans-serif;
   border: none;
@@ -1492,36 +1524,44 @@ button,
   width: 100%;
 }
 
-.modal__input--textarea {
-  width: 100%;
-  margin-bottom: 5px;
-}
-
-.modal__input::-webkit-input-placeholder {
+.modal__fields input::-webkit-input-placeholder,
+.modal__fields textarea::-webkit-input-placeholder {
   color: #ffffff;
 }
 
-.modal__input::-moz-placeholder {
+.modal__fields input::-moz-placeholder,
+.modal__fields textarea::-moz-placeholder {
   color: #ffffff;
 }
 
-.modal__input:-ms-input-placeholder {
+.modal__fields input:-ms-input-placeholder,
+.modal__fields textarea:-ms-input-placeholder {
   color: #ffffff;
 }
 
-.modal__input::-ms-input-placeholder {
+.modal__fields input::-ms-input-placeholder,
+.modal__fields textarea::-ms-input-placeholder {
   color: #ffffff;
 }
 
-.modal__input::placeholder {
+.modal__fields input::placeholder,
+.modal__fields textarea::placeholder {
   color: #ffffff;
 }
 
-.modal__input:hover,
-.modal__input:focus,
-.modal__input:active {
+.modal__fields input:hover,
+.modal__fields input:focus,
+.modal__fields input:active,
+.modal__fields textarea:hover,
+.modal__fields textarea:focus,
+.modal__fields textarea:active {
   -webkit-box-shadow: 0 0 0 1px #ffffff;
   box-shadow: 0 0 0 1px #ffffff;
+}
+
+.modal__fields textarea {
+  width: 100%;
+  margin-bottom: 5px;
 }
 
 .modal__button {
@@ -1792,16 +1832,6 @@ button,
   width: 300px;
   padding: 14px 0 28px;
   margin: 0 0 44px 0;
-  /* &.is-valid {
-    .custom-select__button {
-      border: 2px solid $color-eucalyptus;
-
-      &:focus,
-      &:hover {
-        border: 2px solid rgba($color-eucalyptus, 0.5);
-      }
-    }
-  } */
 }
 
 .custom-select__label {
@@ -2084,11 +2114,11 @@ button,
   color: #ffffff;
 }
 
-.services__title--mobile {
+.services__title-text--mobile {
   display: inline-block;
 }
 
-.services__title--desktop {
+.services__title-text--desktop {
   display: none;
 }
 
@@ -2107,18 +2137,19 @@ button,
   padding: 30px;
   background-size: cover;
   min-height: 250px;
+  background-color: #00b3ff;
 }
 
 .services__item--1 {
-  background-image: url("../../img/service-mobile-1.jpg");
+  background-image: url("../img/service-mobile-1.jpg");
 }
 
 .services__item--2 {
-  background-image: url("../../img/service-mobile-2.jpg");
+  background-image: url("../img/service-mobile-2.jpg");
 }
 
 .services__item--3 {
-  background-image: url("../../img/service-mobile-3.jpg");
+  background-image: url("../img/service-mobile-3.jpg");
 }
 
 .services__item-text {
@@ -2166,7 +2197,7 @@ button,
 
 .welcome {
   position: relative;
-  background-image: url("../../img/welcome-background-mobile.jpg");
+  background-image: url("../img/welcome-background-mobile.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #00b3ff;
@@ -2259,47 +2290,6 @@ button,
   display: none;
 }
 
-/* @mixin hover-focus {
-    @media (hover: hover) {
-      &:hover:not(.focus-visible) {
-        @content;
-      }
-    }
-
-    &.focus-visible:focus {
-      @content;
-    }
-  }
-*/
-
-/*  @include hover-focus {
-      opacity: 0.8;
-    }
-*/
-
-/*@mixin hover {
-    @media (hover: hover) {
-      &:hover:not(.focus-visible) {
-        @content;
-      }
-    }
-  }
-*/
-
-/*@mixin focus {
-    &.focus-visible:focus {
-      @content;
-    }
-  }
-*/
-
-/*@mixin active {
-    &.focus-visible:active {
-      @content;
-    }
-  }
-*/
-
 @media (min-width: 768px) {
   .aboutus {
     display: -webkit-box;
@@ -2320,13 +2310,13 @@ button,
     margin-bottom: 10px;
   }
 
-  .aboutus__text {
+  .aboutus__text-wrapper p {
     font-size: 16px;
     line-height: 22px;
     margin-bottom: 20px;
   }
 
-  .aboutus__text--mobile-hidden {
+  .aboutus__text-wrapper span {
     display: block;
     height: auto;
   }
@@ -2351,22 +2341,22 @@ button,
     padding: 40px 40px 28px 40px;
   }
 
-  .advantages__item:nth-child(3),
-  .advantages__item:nth-child(4) {
+  .advantages__item:nth-last-child(2),
+  .advantages__item:last-child {
     padding: 40px 45px 60px 45px;
   }
 
-  .advantages__icon {
+  .advantages__item svg {
     width: 35px;
     height: 35px;
     margin-bottom: 13px;
   }
 
-  .advantages__title {
+  .advantages__item h3 {
     font-size: 24px;
   }
 
-  .advantages__text {
+  .advantages__item p {
     font-size: 16px;
     line-height: 22px;
   }
@@ -2422,11 +2412,7 @@ button,
     display: none;
   }
 
-  .footer__accordeon-icon--minus {
-    display: none;
-  }
-
-  .footer__accordeon-icon--plus {
+  .footer__accordeon-icon {
     display: none;
   }
 
@@ -2487,17 +2473,17 @@ button,
     line-height: 22px;
   }
 
+  .form__fields textarea {
+    height: 152px;
+    margin-bottom: 28px;
+  }
+
   .form__fields-firstline {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
-  }
-
-  .form__input--textarea {
-    height: 152px;
-    margin-bottom: 28px;
   }
 
   .form__ending-wrapper {
@@ -2541,24 +2527,24 @@ button,
     margin-bottom: 35px;
   }
 
-  .services__title--mobile {
+  .services__title-text--mobile {
     display: none;
   }
 
-  .services__title--desktop {
+  .services__title-text--desktop {
     display: inline-block;
   }
 
   .services__item--1 {
-    background-image: url("../../img/service-tablet-1.jpg");
+    background-image: url("../img/service-tablet-1.jpg");
   }
 
   .services__item--2 {
-    background-image: url("../../img/service-tablet-2.jpg");
+    background-image: url("../img/service-tablet-2.jpg");
   }
 
   .services__item--3 {
-    background-image: url("../../img/service-tablet-3.jpg");
+    background-image: url("../img/service-tablet-3.jpg");
   }
 
   .services__item {
@@ -2575,7 +2561,7 @@ button,
   }
 
   .welcome {
-    background-image: url("../../img/welcome-background-tablet.jpg");
+    background-image: url("../img/welcome-background-tablet.jpg");
   }
 
   .welcome__wrapper {
@@ -2644,16 +2630,17 @@ button,
     padding: 40px 40px;
   }
 
-  .advantages__icon {
+  .advantages__item svg {
     margin-bottom: 20px;
   }
 
-  .advantages__title {
+  .advantages__item h3 {
     margin-bottom: 15px;
   }
 
   .contacts__link-text {
     display: block;
+    font-family: "PT Mono", "Arial", sans-serif;
   }
 
   .footer__wrapper {
@@ -2709,7 +2696,7 @@ button,
     margin-bottom: 15px;
   }
 
-  .form__input--textarea {
+  .form__fields textarea {
     height: auto;
     margin-bottom: 10px;
   }
@@ -2753,15 +2740,15 @@ button,
   }
 
   .services__item--1 {
-    background-image: url("../../img/service-1.jpg");
+    background-image: url("../img/service-1.jpg");
   }
 
   .services__item--2 {
-    background-image: url("../../img/service-2.jpg");
+    background-image: url("../img/service-2.jpg");
   }
 
   .services__item--3 {
-    background-image: url("../../img/service-3.jpg");
+    background-image: url("../img/service-3.jpg");
   }
 
   .services__item {
@@ -2778,7 +2765,7 @@ button,
   }
 
   .welcome {
-    background-image: url("../../img/welcome-background-desktop.jpg");
+    background-image: url("../img/welcome-background-desktop.jpg");
   }
 
   .welcome__wrapper {

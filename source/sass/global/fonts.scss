@@ -1,8 +1,31 @@
 // PT Mono
 
-@import url("https://fonts.googleapis.com/css2?family=PT+Mono&display=swap");
+@font-face {
+  font-family: "PT Mono";
+  src: url("../../fonts/ptmono.woff2") format("woff2"),
+    url("../../fonts/ptmono.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 // Roboto Condensed
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap");
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("../../fonts/robotocondensed.woff2") format("woff2"),
+    url("../../fonts/robotocondensed.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("../../fonts/robotocondensedbold.woff2") format("woff2"),
+    url("../../fonts/robotocondensedbold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

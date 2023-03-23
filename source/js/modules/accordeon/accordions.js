@@ -111,9 +111,6 @@ export class Accordions {
   openAccordion(element, transition = true) {
     const parentElement = element.closest('[data-accordion="parent"]');
     const contentElement = element.querySelector('[data-accordion="content"]');
-    const accordeonButton = element.querySelector('[data-accordion="button"]');
-    const plusIcon = accordeonButton.querySelector('.footer__accordeon-icon--plus');
-    const minusIcon = accordeonButton.querySelector('.footer__accordeon-icon--minus');
     this._openHeight += contentElement.scrollHeight;
 
     if (parentElement.hasAttribute('data-single')) {
@@ -121,8 +118,6 @@ export class Accordions {
     }
 
     element.classList.add('is-active');
-    plusIcon.style.display = 'none';
-    minusIcon.style.display = 'block';
 
     if (transition) {
       contentElement.style.maxHeight = `${this._openHeight}px`;
@@ -144,12 +139,6 @@ export class Accordions {
 
   closeAccordion(element, transition = true) {
     const contentElement = element.querySelector('[data-accordion="content"]');
-    const accordeonButton = element.querySelector('[data-accordion="button"]');
-    const plusIcon = accordeonButton.querySelector('.footer__accordeon-icon--plus');
-    const minusIcon = accordeonButton.querySelector('.footer__accordeon-icon--minus');
-
-    minusIcon.style.display = 'none';
-    plusIcon.style.display = 'block';
 
     if (!contentElement) {
       return;

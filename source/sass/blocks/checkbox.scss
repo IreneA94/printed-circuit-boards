@@ -6,14 +6,14 @@
   }
 }
 
-.checkbox-label {
+.checkbox__label {
   position: relative;
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.checkbox-text {
+.checkbox__text {
   font-family: "PT Mono", "Arial", sans-serif;
   display: block;
   font-size: 14px;
@@ -22,7 +22,7 @@
   margin: 0;
 }
 
-.checkbox-input[type="checkbox"] {
+.checkbox__input[type="checkbox"] {
   position: relative;
   width: 15px;
   height: 15px;
@@ -31,7 +31,7 @@
   cursor: pointer;
 }
 
-.checkbox-mark {
+.checkbox__mark {
   cursor: pointer;
   content: "";
   position: absolute;
@@ -44,13 +44,13 @@
   border: 1px solid $color-default-white;
 }
 
-.checkbox-input[type="checkbox"]:checked + .checkbox-mark {
-  background-image: url("../../img/sprite/checkbox.svg");
+.checkbox__input[type="checkbox"]:checked + .checkbox__mark {
+  background-image: url("../img/sprite/checkbox.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
 
-.checkbox-input[type="checkbox"]:hover + .checkbox-mark,
-.checkbox-input[type="checkbox"]:focus + .checkbox-mark {
+.checkbox__input[type="checkbox"]:hover + .checkbox__mark,
+.checkbox__input[type="checkbox"]:focus + .checkbox__mark {
   box-shadow: 0 0 0 1px $color-default-white;
 }

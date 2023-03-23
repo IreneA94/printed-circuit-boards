@@ -135,18 +135,16 @@
 }
 
 .footer__accordeon-icon {
+  .is-active {
+    display: block;
+  }
+
   &--minus {
     display: none;
   }
 
   @media (min-width: $vp-768) {
-    &--minus {
-      display: none;
-    }
-
-    &--plus {
-      display: none;
-    }
+    display: none;
   }
 }
 

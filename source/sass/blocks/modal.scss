@@ -154,35 +154,36 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
-}
 
-.modal__input {
-  cursor: pointer;
-  font-family: "PT Mono", "Arial", sans-serif;
-  border: none;
-  padding: 15px;
-  font-size: 16px;
-  line-height: 22px;
-  background: $color-input-background;
-  border-radius: 3px;
-  color: $color-default-white;
-  outline: none;
-  box-sizing: border-box;
-  width: 100%;
+  input,
+  textarea {
+    cursor: pointer;
+    font-family: "PT Mono", "Arial", sans-serif;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    line-height: 22px;
+    background: $color-input-background;
+    border-radius: 3px;
+    color: $color-default-white;
+    outline: none;
+    box-sizing: border-box;
+    width: 100%;
 
-  &--textarea {
+    &::placeholder {
+      color: $color-default-white;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      box-shadow: 0 0 0 1px $color-default-white;
+    }
+  }
+
+  textarea {
     width: 100%;
     margin-bottom: 5px;
-  }
-
-  &::placeholder {
-    color: $color-default-white;
-  }
-
-  &:hover,
-  &:focus,
-  &:active {
-    box-shadow: 0 0 0 1px $color-default-white;
   }
 }
 

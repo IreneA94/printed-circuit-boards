@@ -42,27 +42,23 @@
   }
 }
 
-.aboutus__text {
-  font-family: "PT Mono", "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 19px;
-  color: $color-header-dark;
-  margin-top: 0;
-  margin-bottom: 20px;
-
-  @media (min-width: $vp-768) {
-    font-size: 16px;
-    line-height: 22px;
+.aboutus__text-wrapper {
+  p {
+    font-family: "PT Mono", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 19px;
+    color: $color-header-dark;
+    margin-top: 0;
     margin-bottom: 20px;
+
+    @media (min-width: $vp-768) {
+      font-size: 16px;
+      line-height: 22px;
+      margin-bottom: 20px;
+    }
   }
 
-  &--hidden {
-    overflow: hidden;
-    height: 0;
-    transition: height 0.5s;
-  }
-
-  &--mobile-hidden {
+  span {
     display: none;
     overflow: hidden;
     height: 0;
@@ -72,6 +68,12 @@
       display: block;
       height: auto;
     }
+  }
+
+  &--hidden {
+    overflow: hidden;
+    height: 0;
+    transition: height 0.5s;
   }
 }
 
@@ -123,7 +125,9 @@
     color: $color-text-white;
     border: 1px solid $color-elements-blue;
   }
+}
 
+.aboutus__button-text {
   &--collapse {
     display: none;
   }

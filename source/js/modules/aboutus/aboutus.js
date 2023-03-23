@@ -1,6 +1,6 @@
 const aboutUsButton = document.querySelector('.aboutus__button');
-const aboutUsButtonMore = document.querySelector('.aboutus__button--more');
-const aboutUsButtonCollapse = document.querySelector('.aboutus__button--collapse');
+const aboutUsButtonMore = document.querySelector('.aboutus__button-text--more');
+const aboutUsButtonCollapse = document.querySelector('.aboutus__button-text--collapse');
 const mobileHiddenText = document.querySelector('[data-text-status="mobile-hidden"]');
 const hiddenText = document.querySelector('[data-text-status="hidden"]');
 

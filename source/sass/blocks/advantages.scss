@@ -34,8 +34,8 @@
   color: $color-elements-blue;
   box-sizing: border-box;
 
-  &:nth-child(3),
-  &:nth-child(4) {
+  &:nth-last-child(2),
+  &:last-child {
     min-height: 325px;
     padding: 30px 40px 20px 25px;
   }
@@ -44,8 +44,8 @@
     min-height: 350px;
     padding: 40px 40px 28px 40px;
 
-    &:nth-child(3),
-    &:nth-child(4) {
+    &:nth-last-child(2),
+    &:last-child {
       padding: 40px 45px 60px 45px;
     }
   }
@@ -67,54 +67,54 @@
     color: $color-text-white;
   }
 
-  &:hover > .advantages__title,
-  &:hover > .advantages__text {
+  &:hover > h3,
+  &:hover > p {
     color: $color-text-white;
   }
-}
 
-.advantages__icon {
-  width: 30px;
-  height: 30px;
-  margin-bottom: 10px;
+  svg {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
 
-  @media (min-width: $vp-768) {
-    width: 35px;
-    height: 35px;
-    margin-bottom: 13px;
+    @media (min-width: $vp-768) {
+      width: 35px;
+      height: 35px;
+      margin-bottom: 13px;
+    }
+
+    @media (min-width: $vp-1024) {
+      margin-bottom: 20px;
+    }
   }
 
-  @media (min-width: $vp-1024) {
-    margin-bottom: 20px;
+  h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: $color-elements-blue;
+    font-size: 20px;
+    line-height: 34px;
+    font-weight: 400;
+
+    @media (min-width: $vp-768) {
+      font-size: 24px;
+    }
+
+    @media (min-width: $vp-1024) {
+      margin-bottom: 15px;
+    }
   }
-}
 
-.advantages__title {
-  margin-top: 0;
-  margin-bottom: 10px;
-  color: $color-elements-blue;
-  font-size: 20px;
-  line-height: 34px;
-  font-weight: 400;
+  p {
+    margin: 0;
+    font-family: "PT Mono", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 19px;
+    color: $color-header-dark;
 
-  @media (min-width: $vp-768) {
-    font-size: 24px;
-  }
-
-  @media (min-width: $vp-1024) {
-    margin-bottom: 15px;
-  }
-}
-
-.advantages__text {
-  margin: 0;
-  font-family: "PT Mono", "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 19px;
-  color: $color-header-dark;
-
-  @media (min-width: $vp-768) {
-    font-size: 16px;
-    line-height: 22px;
+    @media (min-width: $vp-768) {
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
 }

@@ -32,7 +32,9 @@
   @media (min-width: $vp-1024) {
     margin-bottom: 50px;
   }
+}
 
+.services__title-text {
   &--mobile {
     display: inline-block;
 
@@ -71,40 +73,41 @@
   padding: 30px;
   background-size: cover;
   min-height: 250px;
+  background-color: $color-background-blue;
 
   &--1 {
-    background-image: url("../../img/service-mobile-1.jpg");
+    background-image: url("../img/service-mobile-1.jpg");
 
     @media (min-width: $vp-768) {
-      background-image: url("../../img/service-tablet-1.jpg");
+      background-image: url("../img/service-tablet-1.jpg");
     }
 
     @media (min-width: $vp-1024) {
-      background-image: url("../../img/service-1.jpg");
+      background-image: url("../img/service-1.jpg");
     }
   }
 
   &--2 {
-    background-image: url("../../img/service-mobile-2.jpg");
+    background-image: url("../img/service-mobile-2.jpg");
 
     @media (min-width: $vp-768) {
-      background-image: url("../../img/service-tablet-2.jpg");
+      background-image: url("../img/service-tablet-2.jpg");
     }
 
     @media (min-width: $vp-1024) {
-      background-image: url("../../img/service-2.jpg");
+      background-image: url("../img/service-2.jpg");
     }
   }
 
   &--3 {
-    background-image: url("../../img/service-mobile-3.jpg");
+    background-image: url("../img/service-mobile-3.jpg");
 
     @media (min-width: $vp-768) {
-      background-image: url("../../img/service-tablet-3.jpg");
+      background-image: url("../img/service-tablet-3.jpg");
     }
 
     @media (min-width: $vp-1024) {
-      background-image: url("../../img/service-3.jpg");
+      background-image: url("../img/service-3.jpg");
     }
   }
 
