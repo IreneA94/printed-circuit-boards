@@ -3,6 +3,7 @@ const hiddenText = document.querySelector('[data-text-status="hidden"]');
 const aboutUsButton = document.querySelector('[data-expand-button="data-expand-button"]');
 
 const textToggle = () => {
+  console.log('test');
   if (aboutUsButton.classList.contains('is-closed')) {
     aboutUsButton.classList.remove('is-closed');
     aboutUsButton.classList.add('is-opened');
@@ -27,7 +28,8 @@ const textToggle = () => {
   }
 };
 
-const onButtonClick = () => {
+const onButtonClick = (evt) => {
+  evt.preventDefault();
   textToggle();
 };
 
