@@ -1,16 +1,11 @@
-const aboutUsButton = document.querySelector('.aboutus__button');
-const aboutUsButtonMore = document.querySelector('.aboutus__button-text--more');
-const aboutUsButtonCollapse = document.querySelector('.aboutus__button-text--collapse');
 const mobileHiddenText = document.querySelector('[data-text-status="mobile-hidden"]');
 const hiddenText = document.querySelector('[data-text-status="hidden"]');
+const aboutUsButton = document.querySelector('[data-expand-button="data-expand-button"]');
 
 const textToggle = () => {
-
   if (aboutUsButton.classList.contains('is-closed')) {
     aboutUsButton.classList.remove('is-closed');
     aboutUsButton.classList.add('is-opened');
-    aboutUsButtonMore.style.display = 'none';
-    aboutUsButtonCollapse.style.display = 'block';
     if (window.innerWidth >= 768) {
       hiddenText.style.height = `${hiddenText.previousElementSibling.clientHeight}px`;
     } else {
@@ -22,8 +17,6 @@ const textToggle = () => {
   } else {
     aboutUsButton.classList.remove('is-opened');
     aboutUsButton.classList.add('is-closed');
-    aboutUsButtonCollapse.style.display = 'none';
-    aboutUsButtonMore.style.display = 'block';
     hiddenText.style.height = null;
     if (window.innerWidth < 768) {
       mobileHiddenText.style.height = null;

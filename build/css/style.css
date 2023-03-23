@@ -740,8 +740,24 @@ button,
   border: 1px solid #00b2ff;
 }
 
-.aboutus__button-text--collapse {
+.aboutus__button-text--collapsed {
   display: none;
+}
+
+.is-closed .aboutus__button-text--more {
+  display: block;
+}
+
+.is-closed .aboutus__button-text--collapsed {
+  display: none;
+}
+
+.is-opened .aboutus__button-text--more {
+  display: none;
+}
+
+.is-opened .aboutus__button-text--collapsed {
+  display: block;
 }
 
 .advantages {
@@ -1052,12 +1068,16 @@ button,
   cursor: pointer;
 }
 
-.footer__accordeon-icon .is-active {
-  display: block;
-}
-
 .footer__accordeon-icon--minus {
   display: none;
+}
+
+.is-active .footer__accordeon-icon--plus {
+  display: none;
+}
+
+.is-active .footer__accordeon-icon--minus {
+  display: block;
 }
 
 .footer__menu-wrapper {

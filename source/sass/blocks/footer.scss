@@ -135,16 +135,24 @@
 }
 
 .footer__accordeon-icon {
-  .is-active {
-    display: block;
-  }
-
   &--minus {
     display: none;
   }
 
   @media (min-width: $vp-768) {
     display: none;
+  }
+}
+
+.is-active {
+  .footer__accordeon-icon {
+    &--plus {
+      display: none;
+    }
+
+    &--minus {
+      display: block;
+    }
   }
 }
 

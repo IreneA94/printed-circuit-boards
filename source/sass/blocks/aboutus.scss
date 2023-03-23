@@ -128,7 +128,31 @@
 }
 
 .aboutus__button-text {
-  &--collapse {
+  &--collapsed {
     display: none;
+  }
+}
+
+.is-closed {
+  .aboutus__button-text {
+    &--more {
+      display: block;
+    }
+
+    &--collapsed {
+      display: none;
+    }
+  }
+}
+
+.is-opened {
+  .aboutus__button-text {
+    &--more {
+      display: none;
+    }
+
+    &--collapsed {
+      display: block;
+    }
   }
 }
