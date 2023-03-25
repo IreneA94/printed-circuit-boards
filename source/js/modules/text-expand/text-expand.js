@@ -1,11 +1,11 @@
 const mobileHiddenText = document.querySelector('[data-text-status="mobile-hidden"]');
 const hiddenText = document.querySelector('[data-text-status="hidden"]');
-const aboutUsButton = document.querySelector('[data-expand-button="data-expand-button"]');
+const expandButton = document.querySelector('[data-expand-button="data-expand-button"]');
 
 const textToggle = () => {
-  if (aboutUsButton.classList.contains('is-closed')) {
-    aboutUsButton.classList.remove('is-closed');
-    aboutUsButton.classList.add('is-opened');
+  if (expandButton.classList.contains('is-closed')) {
+    expandButton.classList.remove('is-closed');
+    expandButton.classList.add('is-opened');
     if (window.innerWidth >= 768) {
       hiddenText.style.height = `${hiddenText.previousElementSibling.clientHeight}px`;
     } else {
@@ -15,8 +15,8 @@ const textToggle = () => {
       mobileHiddenText.style.height = '130px';
     }
   } else {
-    aboutUsButton.classList.remove('is-opened');
-    aboutUsButton.classList.add('is-closed');
+    expandButton.classList.remove('is-opened');
+    expandButton.classList.add('is-closed');
     hiddenText.style.height = null;
     if (window.innerWidth < 768) {
       mobileHiddenText.style.height = null;
@@ -32,8 +32,8 @@ const onButtonClick = (evt) => {
   textToggle();
 };
 
-const aboutUsButtonClick = () => {
-  aboutUsButton.addEventListener('click', onButtonClick);
+const textExpand = () => {
+  expandButton.addEventListener('click', onButtonClick);
 };
 
-export {aboutUsButtonClick};
+export {textExpand};
