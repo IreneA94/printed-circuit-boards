@@ -10,7 +10,7 @@
   }
 
   @media (min-width: $vp-1920) {
-    padding: 120px 350px 55px 350px;
+    padding: 120px 350px 80px 350px;
   }
 }
 
@@ -58,6 +58,14 @@
 
   @media (min-width: $vp-1440) {
     min-width: 595px;
+    min-height: 280px;
+    padding: 40px 45px 65px 40px;
+
+    &:nth-last-child(2),
+    &:last-child {
+      padding: 40px 45px 65px 40px;
+      min-height: 300px;
+    }
   }
 
 

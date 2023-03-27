@@ -416,7 +416,7 @@ body {
 
 @font-face {
   font-family: "Roboto Condensed";
-  src: url("../../fonts/robotocondensedbold.woff2") format("woff2"), url("../../fonts/robotocondensedbold.woff") format("woff");
+  src: url("../fonts/robotocondensedbold.woff2") format("woff2"), url("../fonts/robotocondensedbold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -993,7 +993,7 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 25px;
+  gap: 20px;
   margin-bottom: 30px;
 }
 
@@ -1033,6 +1033,7 @@ button,
 
 .footer__chapters-title-wrapper,
 .footer__contacts-title-wrapper {
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1042,7 +1043,7 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 20px 25px;
+  padding: 18px 25px;
   border-top: 1px solid rgba(255, 255, 255, 0.7);
 }
 
@@ -1214,7 +1215,7 @@ button,
 
 .form__fields input,
 .form__fields textarea {
-  cursor: pointer;
+  cursor: text;
   font-family: "PT Mono", "Arial", sans-serif;
   border: none;
   padding: 13px 15px;
@@ -1529,7 +1530,7 @@ button,
 
 .modal__fields input,
 .modal__fields textarea {
-  cursor: pointer;
+  cursor: text;
   font-family: "PT Mono", "Arial", sans-serif;
   border: none;
   padding: 15px;
@@ -2322,6 +2323,7 @@ button,
   .aboutus__illustration {
     display: block;
     height: 320px;
+    min-width: 150px;
   }
 
   .aboutus__title {
@@ -2414,6 +2416,8 @@ button,
 
   .footer__chapters-title-wrapper,
   .footer__contacts-title-wrapper {
+    cursor: auto;
+    pointer-events: none;
     padding: 0;
     border: none;
   }
@@ -2450,6 +2454,7 @@ button,
   .footer__chapters-list-wrapper {
     overflow: visible;
     max-height: 100%;
+    height: 100%;
   }
 
   .footer__chapters-list {
@@ -2471,6 +2476,7 @@ button,
   .footer__contacts-list-wrapper {
     overflow: visible;
     max-height: 100%;
+    height: 100%;
   }
 
   .footer__contacts-list {
@@ -2811,10 +2817,19 @@ button,
 @media (min-width: 1440px) {
   .advantages__item {
     min-width: 595px;
+    min-height: 280px;
+    padding: 40px 45px 65px 40px;
+  }
+
+  .advantages__item:nth-last-child(2),
+  .advantages__item:last-child {
+    padding: 40px 45px 65px 40px;
+    min-height: 300px;
   }
 
   .footer__menu-wrapper {
     gap: 280px;
+    padding-top: 5px;
   }
 
   .footer__chapters-list {
@@ -2855,11 +2870,11 @@ button,
 @media (min-width: 1920px) {
   .aboutus {
     gap: 95px;
-    padding: 40px 350px 93px 350px;
+    padding: 40px 350px 100px 350px;
   }
 
   .advantages {
-    padding: 120px 350px 55px 350px;
+    padding: 120px 350px 80px 350px;
   }
 
   .contacts {
@@ -2867,7 +2882,7 @@ button,
   }
 
   .footer__wrapper {
-    padding: 60px 390px 54px 350px;
+    padding: 50px 390px 54px 350px;
   }
 
   .form__decoration {
@@ -2876,7 +2891,7 @@ button,
   }
 
   .form__content-wrapper {
-    padding: 170px 355px 0 0;
+    padding: 165px 355px 0 0;
     min-width: 940px;
     max-width: 960px;
   }

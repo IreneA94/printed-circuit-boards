@@ -14,7 +14,7 @@
 
   @media (min-width: $vp-1920) {
     gap: 95px;
-    padding: 40px 350px 93px 350px;
+    padding: 40px 350px 100px 350px;
   }
 }
 
@@ -24,6 +24,7 @@
   @media (min-width: $vp-768) {
     display: block;
     height: 320px;
+    min-width: 150px;
   }
 }
 
