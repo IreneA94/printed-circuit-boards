@@ -1,12 +1,13 @@
 .welcome {
   position: relative;
-  background-image: url("../img/welcome-background-mobile.jpg");
+  background-image: url("../img/welcome-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 40%;
   background-color: $color-background-blue;
 
   @media (min-width: $vp-768) {
-    background-image: url("../img/welcome-background-tablet.jpg");
+    background-position: 0 0;
   }
 
   @media (min-width: $vp-1024) {

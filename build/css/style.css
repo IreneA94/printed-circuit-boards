@@ -920,13 +920,17 @@ button,
   box-shadow: 0 0 5px 1px #ffffff;
 }
 
+.checkbox__text-hyphenation {
+  display: none;
+}
+
 .contacts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  max-width: 715px;
+  max-width: 380px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -951,6 +955,7 @@ button,
 
 .contacts__link svg {
   color: #00b2ff;
+  min-width: 20px;
 }
 
 .contacts__link:hover,
@@ -1371,7 +1376,6 @@ button,
 }
 
 .header {
-  position: sticky;
   top: 0;
   left: 0;
   z-index: 4;
@@ -2304,9 +2308,10 @@ button,
 
 .welcome {
   position: relative;
-  background-image: url("../img/welcome-background-mobile.jpg");
+  background-image: url("../img/welcome-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 40%;
   background-color: #00b3ff;
 }
 
@@ -2471,6 +2476,10 @@ button,
 
   .checkbox {
     margin: 10px;
+  }
+
+  .checkbox__text-hyphenation {
+    display: block;
   }
 
   .contacts {
@@ -2673,7 +2682,7 @@ button,
   }
 
   .welcome {
-    background-image: url("../img/welcome-background-tablet.jpg");
+    background-position: 0 0;
   }
 
   .welcome__wrapper {
@@ -2819,6 +2828,10 @@ button,
 
   .form__button {
     padding: 15px 25px;
+  }
+
+  .header {
+    position: sticky;
   }
 
   .header__wrapper {

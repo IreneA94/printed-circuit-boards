@@ -1,7 +1,7 @@
 .contacts {
   display: flex;
   flex-wrap: wrap;
-  max-width: 715px;
+  max-width: 380px;
   align-items: center;
   gap: 35px;
 
@@ -27,6 +27,7 @@
 
   svg {
     color: $color-elements-blue;
+    min-width: 20px;
   }
 
   &:hover,

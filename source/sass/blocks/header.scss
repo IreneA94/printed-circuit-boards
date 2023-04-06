@@ -1,10 +1,13 @@
 .header {
-  position: sticky;
   top: 0;
   left: 0;
   z-index: 4;
   background: $header-gradient;
   width: 100%;
+
+  @media (min-width: $vp-1024) {
+    position: sticky;
+  }
 }
 
 .header__wrapper {

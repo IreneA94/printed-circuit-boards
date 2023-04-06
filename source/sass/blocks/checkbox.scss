@@ -58,3 +58,11 @@
   outline: none;
   box-shadow: 0 0 5px 1px $color-default-white;
 }
+
+.checkbox__text-hyphenation {
+  display: none;
+
+  @media (min-width: $vp-768) {
+    display: block;
+  }
+}
