@@ -284,4 +284,10 @@
   color: $color-white-transparent;
   font-size: 16px;
   line-height: 22px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-default-white;
+  }
 }

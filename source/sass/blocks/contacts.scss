@@ -24,6 +24,20 @@
   font-size: 16px;
   line-height: 18px;
   padding: 5px 5px 10px 0;
+
+  svg {
+    color: $color-elements-blue;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-default-white;
+
+    svg {
+      color: $color-background-blue-intensive;
+    }
+  }
 }
 
 .contacts__link-text {

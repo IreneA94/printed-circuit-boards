@@ -255,20 +255,22 @@
                       <textarea rows="6" name="question" id="form-question" placeholder="Ваш вопрос"></textarea>
                     </div>
                     <div class="form__ending-wrapper">
-                      <div>
+                      <div class="form__checkbox__wrapper">
+                        <div class="checkbox">
+                          <label class="checkbox__label">
+                            <input class="checkbox__input" type="checkbox" name="subscription-policy" required checked>
+                            <span class="checkbox__mark"></span>
+                            <span class="checkbox__text">
+                              Я&nbsp;согласен на&nbsp;обработку<br>
+                              персональных данных
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="form__button-wrapper">
                         <button class="form__button" type="submit">
                           Задать вопрос
                         </button>
-                      </div>
-                      <div class="checkbox">
-                        <label class="checkbox__label">
-                          <input class="checkbox__input" type="checkbox" name="subscription-policy" required checked>
-                          <span class="checkbox__mark"></span>
-                          <span class="checkbox__text">
-                            Я&nbsp;согласен на&nbsp;обработку<br>
-                            персональных данных
-                          </span>
-                        </label>
                       </div>
                     </div>
                   </fieldset>
@@ -434,19 +436,23 @@
                   <label class="visually-hidden" for="modal-form-question">Поле ввода вопроса</label>
                   <textarea rows="7" name="question" id="modal-form-question" placeholder="Ваш вопрос"></textarea>
                 </div>
-                <div>
-                  <button class="modal__button" type="submit">
-                    Отправить
-                  </button>
-                </div>
-                <div class="checkbox">
-                  <label class="checkbox__label">
-                    <input class="checkbox__input" type="checkbox" name="subscription-policy" required checked>
-                    <span class="checkbox__mark"></span>
-                    <span class="checkbox__text">
-                      Я&nbsp;согласен на&nbsp;обработку персональных данных
-                    </span>
-                  </label>
+                <div class="modal__ending-wrapper">
+                  <div class="modal__checkbox-wrapper">
+                    <div class="checkbox">
+                      <label class="checkbox__label">
+                        <input class="checkbox__input" type="checkbox" name="subscription-policy" required checked>
+                        <span class="checkbox__mark"></span>
+                        <span class="checkbox__text">
+                          Я&nbsp;согласен на&nbsp;обработку персональных данных
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="modal__button-wrapper">
+                    <button class="modal__button" type="submit">
+                      Отправить
+                    </button>
+                  </div>
                 </div>
               </fieldset>
             </form>

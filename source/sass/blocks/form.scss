@@ -123,6 +123,7 @@
     font-size: 16px;
     line-height: 22px;
     background: $color-input-background;
+    border: 1px solid $color-input-autofill-background;
     border-radius: 3px;
     color: $color-default-white;
     outline: none;
@@ -136,7 +137,13 @@
     &:hover,
     &:focus,
     &:active {
-      box-shadow: 0 0 0 1px $color-default-white;
+      border: 1px solid $color-default-white;
+      border-radius: 3px;
+    }
+
+    &:-webkit-autofill {
+      -webkit-text-fill-color: $color-default-white;
+      -webkit-box-shadow: 0 0 0px 40rem $color-input-autofill-background inset;
     }
   }
 
@@ -188,6 +195,14 @@
   @media (min-width: $vp-1440) {
     gap: 40px;
   }
+}
+
+.form__button-wrapper {
+  order: 1;
+}
+
+.form__checkbox__wrapper {
+  order: 2;
 }
 
 .form__button {

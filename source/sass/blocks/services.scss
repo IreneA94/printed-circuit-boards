@@ -67,60 +67,6 @@
   }
 }
 
-.services__item {
-  position: relative;
-  box-sizing: border-box;
-  padding: 30px;
-  background-size: cover;
-  min-height: 250px;
-  background-color: $color-background-blue;
-
-  &--1 {
-    background-image: url("../img/service-mobile-1.jpg");
-
-    @media (min-width: $vp-768) {
-      background-image: url("../img/service-tablet-1.jpg");
-    }
-
-    @media (min-width: $vp-1024) {
-      background-image: url("../img/service-1.jpg");
-    }
-  }
-
-  &--2 {
-    background-image: url("../img/service-mobile-2.jpg");
-
-    @media (min-width: $vp-768) {
-      background-image: url("../img/service-tablet-2.jpg");
-    }
-
-    @media (min-width: $vp-1024) {
-      background-image: url("../img/service-2.jpg");
-    }
-  }
-
-  &--3 {
-    background-image: url("../img/service-mobile-3.jpg");
-
-    @media (min-width: $vp-768) {
-      background-image: url("../img/service-tablet-3.jpg");
-    }
-
-    @media (min-width: $vp-1024) {
-      background-image: url("../img/service-3.jpg");
-    }
-  }
-
-  @media (min-width: $vp-768) {
-    padding: 40px 45px;
-  }
-
-  @media (min-width: $vp-1024) {
-    padding: 50px 80px 50px 40px;
-    min-height: 650px;
-  }
-}
-
 .services__item-text {
   display: block;
   font-size: 18px;
@@ -164,15 +110,6 @@
     width: 60px;
     height: 60px;
   }
-
-  &:hover,
-  &:focus,
-  &:active {
-    outline: none;
-    background-color: $color-default-white;
-    color: $color-elements-blue;
-    box-shadow: 0 0 0 1px $color-elements-blue;
-  }
 }
 
 .services__item-link-arrow svg {
@@ -180,4 +117,77 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.services__item {
+  background-color: $color-background-blue;
+  background-size: cover;
+
+  &--1 {
+    background-image: url("../img/service-mobile-1.jpg");
+
+    @media (min-width: $vp-768) {
+      background-image: url("../img/service-tablet-1.jpg");
+    }
+
+    @media (min-width: $vp-1024) {
+      background-image: url("../img/service-1.jpg");
+    }
+  }
+
+  &--2 {
+    background-image: url("../img/service-mobile-2.jpg");
+
+    @media (min-width: $vp-768) {
+      background-image: url("../img/service-tablet-2.jpg");
+    }
+
+    @media (min-width: $vp-1024) {
+      background-image: url("../img/service-2.jpg");
+    }
+  }
+
+  &--3 {
+    background-image: url("../img/service-mobile-3.jpg");
+
+    @media (min-width: $vp-768) {
+      background-image: url("../img/service-tablet-3.jpg");
+    }
+
+    @media (min-width: $vp-1024) {
+      background-image: url("../img/service-3.jpg");
+    }
+  }
+}
+
+.services__item-link {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 0 0 1px transparent;
+  box-sizing: border-box;
+  padding: 30px;
+  min-height: 250px;
+  outline: none;
+  border: none;
+
+  &:hover {
+    box-shadow: 0 0 0 1px $color-elements-blue;
+
+    .services__item-link-arrow {
+      outline: none;
+      background-color: $color-default-white;
+      color: $color-elements-blue;
+      box-shadow: 0 0 0 1px $color-elements-blue;
+    }
+  }
+
+  @media (min-width: $vp-768) {
+    padding: 40px 45px;
+  }
+
+  @media (min-width: $vp-1024) {
+    padding: 50px 80px 50px 40px;
+    min-height: 650px;
+  }
 }

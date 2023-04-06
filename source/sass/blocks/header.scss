@@ -50,10 +50,9 @@
   border: 1px solid $color-text-white;
   border-radius: 3px;
   outline: none;
+  max-width: 160px;
 
-  &:hover,
-  &:focus,
-  &:active {
+  &:hover {
     outline: none;
     background-color: $color-text-white;
     color: $color-header-dark;

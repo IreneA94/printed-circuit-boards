@@ -160,10 +160,11 @@
     cursor: text;
     font-family: "PT Mono", "Arial", sans-serif;
     border: none;
-    padding: 15px;
+    padding: 13px 15px;
     font-size: 16px;
     line-height: 22px;
     background: $color-input-background;
+    border: 1px solid $color-input-autofill-background;
     border-radius: 3px;
     color: $color-default-white;
     outline: none;
@@ -177,7 +178,13 @@
     &:hover,
     &:focus,
     &:active {
-      box-shadow: 0 0 0 1px $color-default-white;
+      border: 1px solid $color-default-white;
+      border-radius: 3px;
+    }
+
+    &:-webkit-autofill {
+      -webkit-text-fill-color: $color-default-white;
+      -webkit-box-shadow: 0 0 0px 40rem $color-input-autofill-background inset;
     }
   }
 
@@ -211,4 +218,18 @@
     outline: none;
     box-shadow: 0 0 0 1px $color-default-white;
   }
+}
+
+.modal__ending-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal__button-wrapper {
+  order: 1;
+}
+
+.modal__checkbox-wrapper {
+  order: 2;
 }
