@@ -159,7 +159,6 @@
   textarea {
     cursor: text;
     font-family: "PT Mono", "Arial", sans-serif;
-    border: none;
     padding: 13px 15px;
     font-size: 16px;
     line-height: 22px;
@@ -184,7 +183,7 @@
 
     &:-webkit-autofill {
       -webkit-text-fill-color: $color-default-white;
-      -webkit-box-shadow: 0 0 0px 40rem $color-input-autofill-background inset;
+      box-shadow: 0 0 0 40rem $color-input-autofill-background inset;
     }
   }
 

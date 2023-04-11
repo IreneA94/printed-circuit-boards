@@ -1,12 +1,13 @@
 .form {
   position: relative;
-  background-color: $color-background-blue;
+  background: linear-gradient(90deg, $color-trianle-grey 0%, $color-trianle-grey 50%, $color-background-blue 50%, $color-background-blue 100%);
 }
 
 .form__big-wrapper {
   position: relative;
   box-sizing: border-box;
   padding: 50px 25px 85px 25px;
+  background-color: $color-background-blue;
 
   @media (min-width: $vp-768) {
     padding: 50px 50px 125px 50px;
@@ -140,7 +141,6 @@
   textarea {
     cursor: text;
     font-family: "PT Mono", "Arial", sans-serif;
-    border: none;
     padding: 13px 15px;
     font-size: 16px;
     line-height: 22px;
@@ -165,7 +165,7 @@
 
     &:-webkit-autofill {
       -webkit-text-fill-color: $color-default-white;
-      -webkit-box-shadow: 0 0 0px 40rem $color-input-autofill-background inset;
+      box-shadow: 0 0 0 40rem $color-input-autofill-background inset;
     }
   }
 

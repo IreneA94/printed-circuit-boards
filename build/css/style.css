@@ -1198,7 +1198,9 @@ button,
 
 .form {
   position: relative;
-  background-color: #00b3ff;
+  background: -webkit-gradient(linear, left top, right top, from(#026593), color-stop(50%, #026593), color-stop(50%, #00b3ff), to(#00b3ff));
+  background: -o-linear-gradient(left, #026593 0%, #026593 50%, #00b3ff 50%, #00b3ff 100%);
+  background: linear-gradient(90deg, #026593 0%, #026593 50%, #00b3ff 50%, #00b3ff 100%);
 }
 
 .form__big-wrapper {
@@ -1206,6 +1208,7 @@ button,
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 50px 25px 85px 25px;
+  background-color: #00b3ff;
 }
 
 .form__big-wrapper::before {
@@ -1255,7 +1258,6 @@ button,
 .form__fields textarea {
   cursor: text;
   font-family: "PT Mono", "Arial", sans-serif;
-  border: none;
   padding: 13px 15px;
   font-size: 16px;
   line-height: 22px;
@@ -1307,7 +1309,8 @@ button,
 .form__fields input:-webkit-autofill,
 .form__fields textarea:-webkit-autofill {
   -webkit-text-fill-color: #ffffff;
-  -webkit-box-shadow: 0 0 0px 40rem #019bdf inset;
+  -webkit-box-shadow: 0 0 0 40rem #019bdf inset;
+  box-shadow: 0 0 0 40rem #019bdf inset;
 }
 
 .form__fields textarea {
@@ -1587,7 +1590,6 @@ button,
 .modal__fields textarea {
   cursor: text;
   font-family: "PT Mono", "Arial", sans-serif;
-  border: none;
   padding: 13px 15px;
   font-size: 16px;
   line-height: 22px;
@@ -1639,7 +1641,8 @@ button,
 .modal__fields input:-webkit-autofill,
 .modal__fields textarea:-webkit-autofill {
   -webkit-text-fill-color: #ffffff;
-  -webkit-box-shadow: 0 0 0px 40rem #019bdf inset;
+  -webkit-box-shadow: 0 0 0 40rem #019bdf inset;
+  box-shadow: 0 0 0 40rem #019bdf inset;
 }
 
 .modal__fields textarea {
