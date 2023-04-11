@@ -83,6 +83,18 @@
     background: $color-transparent;
     border: none;
     cursor: pointer;
+
+    &:hover {
+      svg {
+        background: $color-transparent;
+        opacity: 0.5;
+      }
+    }
+
+    &:focus {
+      border-radius: 10px;
+      border: 1px solid white;
+    }
   }
 
   &--responsive {
@@ -210,6 +222,7 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   outline: none;
+  border: none;
 
   &:hover,
   &:focus,

@@ -21,6 +21,7 @@
 
   @media (min-width: $vp-1920) {
     max-width: 1920px;
+    padding: 50px 0 240px 0;
   }
 
   &::before {
@@ -44,8 +45,8 @@
     }
 
     @media (min-width: $vp-1920) {
-      border: 385px solid transparent;
-      border-left: 390px solid $color-trianle-grey;
+      border: 450px solid transparent;
+      border-left: 530px solid $color-trianle-grey;
       border-top: 390px solid $color-trianle-grey;
     }
   }
@@ -92,7 +93,7 @@
   }
 
   @media (min-width: $vp-1920) {
-    padding: 165px 355px 0 0;
+    padding: 115px 355px 0 0;
     min-width: 940px;
     max-width: 960px;
   }
@@ -244,6 +245,7 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   outline: none;
+  border: none;
 
   &:hover,
   &:focus,

@@ -239,7 +239,7 @@
                   Мы&nbsp;проконсультируем Вас бесплатно
                 </p>
                 <div data-form-validate="data-form-validate" data-callback="base">
-                  <form action="https://echo.htmlacademy.ru/" method="post">
+                  <form form action="https://echo.htmlacademy.ru/" method="post">
                     <fieldset class="form__fields">
                       <div class="form__fields-firstline">
                         <div data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required>
@@ -258,14 +258,16 @@
                       <div class="form__ending-wrapper">
                         <div class="form__checkbox__wrapper">
                           <div class="checkbox">
-                            <label class="checkbox__label">
-                              <input class="checkbox__input" type="checkbox" name="subscription-policy" required checked>
-                              <span class="checkbox__mark"></span>
-                              <span class="checkbox__text">
-                                Я&nbsp;согласен на&nbsp;обработку<br class="checkbox__text-hyphenation">
-                                персональных данных
-                              </span>
-                            </label>
+                            <div data-validate-type="checkbox" data-message-base="Без согласия на обработку персональных данных форма не может быть отправлена" data-required>
+                              <label class="checkbox__label">
+                                <input class="checkbox__input" type="checkbox" name="subscription-policy" required checked>
+                                <span class="checkbox__mark"></span>
+                                <span class="checkbox__text">
+                                  Я&nbsp;согласен на&nbsp;обработку<br class="checkbox__text-hyphenation">
+                                  персональных данных
+                                </span>
+                              </label>
+                            </div>
                           </div>
                         </div>
                         <div class="form__button-wrapper">
@@ -443,13 +445,15 @@
                 <div class="modal__ending-wrapper">
                   <div class="modal__checkbox-wrapper">
                     <div class="checkbox">
-                      <label class="checkbox__label">
-                        <input class="checkbox__input" type="checkbox" name="subscription-policy" required checked>
-                        <span class="checkbox__mark"></span>
-                        <span class="checkbox__text">
-                          Я&nbsp;согласен на&nbsp;обработку персональных данных
-                        </span>
-                      </label>
+                      <div data-validate-type="checkbox" data-message-base="Без согласия на обработку персональных данных форма не может быть отправлена" data-required>
+                        <label class="checkbox__label">
+                          <input class="checkbox__input" type="checkbox" name="subscription-policy" required checked>
+                          <span class="checkbox__mark"></span>
+                          <span class="checkbox__text">
+                            Я&nbsp;согласен на&nbsp;обработку персональных данных
+                          </span>
+                        </label>
+                      </div>
                     </div>
                   </div>
                   <div class="modal__button-wrapper">
@@ -461,7 +465,7 @@
               </fieldset>
             </form>
           </div>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+          <button class="modal__close-btn btn-reset" type="button" tabindex="0" aria-label="Закрыть попап" data-close-modal>
             <svg width="20" height="20">
               <use xlink:href="img/sprite.svg#icon-close"></use>
             </svg>

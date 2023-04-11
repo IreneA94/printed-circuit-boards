@@ -890,6 +890,7 @@ button,
   position: relative;
   width: 8px;
   height: 8px;
+  padding: 0;
   margin: 4px;
   outline: none;
 }
@@ -1375,6 +1376,7 @@ button,
   letter-spacing: 0.05em;
   text-transform: uppercase;
   outline: none;
+  border: none;
 }
 
 .form__button:hover,
@@ -1528,6 +1530,16 @@ button,
   cursor: pointer;
 }
 
+.modal__close-btn:hover svg {
+  background: rgba(255, 255, 255, 0);
+  opacity: 0.5;
+}
+
+.modal__close-btn:focus {
+  border-radius: 10px;
+  border: 1px solid white;
+}
+
 .modal--responsive .modal__content {
   width: 100%;
 }
@@ -1671,6 +1683,7 @@ button,
   letter-spacing: 0.05em;
   text-transform: uppercase;
   outline: none;
+  border: none;
 }
 
 .modal__button:hover,
@@ -3036,11 +3049,12 @@ button,
 
   .form__big-wrapper {
     max-width: 1920px;
+    padding: 50px 0 240px 0;
   }
 
   .form__big-wrapper::before {
-    border: 385px solid transparent;
-    border-left: 390px solid #026593;
+    border: 450px solid transparent;
+    border-left: 530px solid #026593;
     border-top: 390px solid #026593;
   }
 
@@ -3049,7 +3063,7 @@ button,
   }
 
   .form__content-wrapper {
-    padding: 165px 355px 0 0;
+    padding: 115px 355px 0 0;
     min-width: 940px;
     max-width: 960px;
   }

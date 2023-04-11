@@ -87,13 +87,13 @@ export class Form {
     const phoneParents = form.querySelectorAll('[data-validate-type="phone"]');
     phoneParents.forEach((item) => this._initPhoneInput(item));
 
-    const callback = parent.dataset.callback;
+    // const callback = parent.dataset.callback;
     form.noValidate = true;
 
-    form.addEventListener('submit', (event) => {
-      event.preventDefault();
-      this._onFormSubmit(event, callback);
-    });
+    // form.addEventListener('submit', (event) => {
+    //   event.preventDefault();
+    //   this._onFormSubmit(event, callback);
+    // });
 
     form.addEventListener('input', (event) => {
       this._onFormInput(event.target);
