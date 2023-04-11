@@ -1,6 +1,10 @@
 .services {
-  padding: 50px 25px 85px 25px;
   background-color: $color-header-dark;
+}
+
+.services__wrapper {
+  box-sizing: border-box;
+  padding: 50px 25px 85px 25px;
 
   @media (min-width: $vp-768) {
     padding: 56px 50px 75px 50px;
@@ -12,6 +16,8 @@
 
   @media (min-width: $vp-1920) {
     padding: 70px 350px 140px 350px;
+    max-width: 1920px;
+    margin: 0 auto;
   }
 }
 

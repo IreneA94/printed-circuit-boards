@@ -170,7 +170,7 @@
           </div>
         </section>
         <section class="services" id="services">
-          <div>
+          <div class="services__wrapper">
             <h2 class="services__title">
               <span class="services__title-text services__title-text--mobile">
                 Товары и&nbsp;услуги<br>
@@ -225,56 +225,58 @@
           </div>
         </section>
         <section class="form" id="form__section">
-          <picture>
-            <source srcset="img/airplane.webp 1x, img/airplane@2x.webp 2x" type="image/webp">
-            <img class="form__decoration" src="img/airplane.png" srcset="img/airplane@2x.png 2x" width="510" height="285" alt="Иллюстрация к блоку с формой.">
-          </picture>
-          <div class="form__wrapper">
-            <div class="form__content-wrapper">
-              <h3 class="form__title">
-                Остались вопросы? Задайте их&nbsp;нам!
-              </h3>
-              <p class="form__text">
-                Мы&nbsp;проконсультируем Вас бесплатно
-              </p>
-              <div data-form-validate="data-form-validate" data-callback="base">
-                <form action="https://echo.htmlacademy.ru/" method="post">
-                  <fieldset class="form__fields">
-                    <div class="form__fields-firstline">
-                      <div data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required>
-                        <label class="visually-hidden" for="form-name">Поле ввода имени</label>
-                        <input type="text" name="name" id="form-name" required placeholder="Имя">
-                      </div>
-                      <div class="is-valid" data-validate-type="phone" data-on-input-validate="" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-message-success="Поле заполнено верно" data-required="">
-                        <label class="visually-hidden" for="form-phone">Поле ввода телефона</label>
-                        <input type="tel" name="phone" id="form-phone" required placeholder="Телефон">
-                      </div>
-                    </div>
-                    <div data-validate-type="text">
-                      <label class="visually-hidden" for="form-question">Поле ввода вопроса</label>
-                      <textarea rows="6" name="question" id="form-question" placeholder="Ваш вопрос"></textarea>
-                    </div>
-                    <div class="form__ending-wrapper">
-                      <div class="form__checkbox__wrapper">
-                        <div class="checkbox">
-                          <label class="checkbox__label">
-                            <input class="checkbox__input" type="checkbox" name="subscription-policy" required checked>
-                            <span class="checkbox__mark"></span>
-                            <span class="checkbox__text">
-                              Я&nbsp;согласен на&nbsp;обработку<br class="checkbox__text-hyphenation">
-                              персональных данных
-                            </span>
-                          </label>
+          <div class="form__big-wrapper">
+            <picture>
+              <source srcset="img/airplane.webp 1x, img/airplane@2x.webp 2x" type="image/webp">
+              <img class="form__decoration" src="img/airplane.png" srcset="img/airplane@2x.png 2x" width="510" height="285" alt="Иллюстрация к блоку с формой.">
+            </picture>
+            <div class="form__wrapper">
+              <div class="form__content-wrapper">
+                <h3 class="form__title">
+                  Остались вопросы? Задайте их&nbsp;нам!
+                </h3>
+                <p class="form__text">
+                  Мы&nbsp;проконсультируем Вас бесплатно
+                </p>
+                <div data-form-validate="data-form-validate" data-callback="base">
+                  <form action="https://echo.htmlacademy.ru/" method="post">
+                    <fieldset class="form__fields">
+                      <div class="form__fields-firstline">
+                        <div data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required>
+                          <label class="visually-hidden" for="form-name">Поле ввода имени</label>
+                          <input type="text" name="name" id="form-name" required placeholder="Имя">
+                        </div>
+                        <div class="is-valid" data-validate-type="phone" data-on-input-validate="" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-message-success="Поле заполнено верно" data-required="">
+                          <label class="visually-hidden" for="form-phone">Поле ввода телефона</label>
+                          <input type="tel" name="phone" id="form-phone" required placeholder="Телефон">
                         </div>
                       </div>
-                      <div class="form__button-wrapper">
-                        <button class="form__button" type="submit">
-                          Задать вопрос
-                        </button>
+                      <div data-validate-type="text">
+                        <label class="visually-hidden" for="form-question">Поле ввода вопроса</label>
+                        <textarea rows="6" name="question" id="form-question" placeholder="Ваш вопрос"></textarea>
                       </div>
-                    </div>
-                  </fieldset>
-                </form>
+                      <div class="form__ending-wrapper">
+                        <div class="form__checkbox__wrapper">
+                          <div class="checkbox">
+                            <label class="checkbox__label">
+                              <input class="checkbox__input" type="checkbox" name="subscription-policy" required checked>
+                              <span class="checkbox__mark"></span>
+                              <span class="checkbox__text">
+                                Я&nbsp;согласен на&nbsp;обработку<br class="checkbox__text-hyphenation">
+                                персональных данных
+                              </span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form__button-wrapper">
+                          <button class="form__button" type="submit">
+                            Задать вопрос
+                          </button>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
@@ -348,6 +350,8 @@
                       Монтаж печатных плат
                     </a>
                   </li>
+                </ul>
+                <ul class="footer__chapters-list clear-list">
                   <li class="footer__chapters-list-item">
                     <a class="footer__chapters-list-item-link" href="#services">
                       Комплектующие

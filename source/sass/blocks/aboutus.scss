@@ -1,4 +1,5 @@
 .aboutus {
+  box-sizing: border-box;
   padding: 18px 25px 80px 25px;
 
   @media (min-width: $vp-768) {
@@ -15,6 +16,8 @@
   @media (min-width: $vp-1920) {
     gap: 95px;
     padding: 40px 350px 100px 350px;
+    max-width: 1920px;
+    margin: 0 auto;
   }
 }
 

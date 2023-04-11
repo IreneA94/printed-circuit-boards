@@ -650,6 +650,8 @@ button,
 }
 
 .aboutus {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   padding: 18px 25px 80px 25px;
 }
 
@@ -761,6 +763,8 @@ button,
 }
 
 .advantages {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   padding: 50px 25px 25px 25px;
 }
 
@@ -930,7 +934,7 @@ button,
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  max-width: 380px;
+  max-width: 460px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -1129,6 +1133,10 @@ button,
   color: rgba(255, 255, 255, 0.7);
   font-size: 16px;
   line-height: 22px;
+  padding: 0 25px;
+}
+
+.footer__chapters-list:last-child {
   padding: 0 25px 15px 25px;
 }
 
@@ -1191,18 +1199,17 @@ button,
 .form {
   position: relative;
   background-color: #00b3ff;
+}
+
+.form__big-wrapper {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   padding: 50px 25px 85px 25px;
 }
 
-.form::after {
+.form__big-wrapper::before {
   display: none;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: 450px solid transparent;
-  border-left: 530px solid rgba(4, 24, 39, 0.5);
-  border-top: 390px solid rgba(4, 24, 39, 0.5);
 }
 
 .form__decoration {
@@ -2200,8 +2207,13 @@ button,
 }
 
 .services {
-  padding: 50px 25px 85px 25px;
   background-color: #041827;
+}
+
+.services__wrapper {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 50px 25px 85px 25px;
 }
 
 .services__title {
@@ -2550,6 +2562,14 @@ button,
     overflow: visible;
     max-height: 100%;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 8px;
   }
 
   .footer__chapters-list {
@@ -2561,6 +2581,10 @@ button,
     -ms-flex-direction: column;
     flex-direction: column;
     row-gap: 8px;
+    padding: 0;
+  }
+
+  .footer__chapters-list:last-child {
     padding: 0;
   }
 
@@ -2578,7 +2602,7 @@ button,
     padding: 0;
   }
 
-  .form {
+  .form__big-wrapper {
     padding: 50px 50px 125px 50px;
   }
 
@@ -2638,7 +2662,7 @@ button,
     line-height: 22px;
   }
 
-  .services {
+  .services__wrapper {
     padding: 56px 50px 75px 50px;
   }
 
@@ -2797,15 +2821,32 @@ button,
     max-width: 220px;
   }
 
-  .form {
+  .form__big-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    min-height: 840px;
-    padding: 0;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    margin: 0 auto;
+  }
+
+  .form__big-wrapper::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 270px solid transparent;
+    border-left: 150px solid #026593;
+    border-top: 510px solid #026593;
+  }
+
+  .form__decoration {
+    display: block;
+    left: 100px;
+    width: 255px;
+    height: 145px;
   }
 
   .form__content-wrapper {
@@ -2851,7 +2892,7 @@ button,
     display: block;
   }
 
-  .services {
+  .services__wrapper {
     padding: 70px 100px 140px 100px;
   }
 
@@ -2927,33 +2968,35 @@ button,
   }
 
   .footer__menu-wrapper {
-    gap: 280px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    min-width: 60%;
     padding-top: 5px;
+    gap: 40px;
+  }
+
+  .footer__chapters-list-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    gap: 30px;
   }
 
   .footer__chapters-list {
-    max-height: 140px;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
     row-gap: 10px;
-    -webkit-column-gap: 30px;
-    -moz-column-gap: 30px;
-    column-gap: 30px;
   }
 
-  .form::after {
-    display: block;
-  }
-
-  .form {
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
+  .form__big-wrapper::before {
+    border: 380px solid transparent;
+    border-left: 380px solid #026593;
+    border-top: 400px solid #026593;
   }
 
   .form__decoration {
-    display: block;
-    left: 100px;
+    width: 510px;
+    height: 285px;
   }
 
   .form__content-wrapper {
@@ -2970,10 +3013,14 @@ button,
   .aboutus {
     gap: 95px;
     padding: 40px 350px 100px 350px;
+    max-width: 1920px;
+    margin: 0 auto;
   }
 
   .advantages {
     padding: 120px 350px 80px 350px;
+    max-width: 1920px;
+    margin: 0 auto;
   }
 
   .contacts {
@@ -2984,8 +3031,17 @@ button,
     padding: 50px 390px 54px 350px;
   }
 
+  .form__big-wrapper {
+    max-width: 1920px;
+  }
+
+  .form__big-wrapper::before {
+    border: 385px solid transparent;
+    border-left: 390px solid #026593;
+    border-top: 390px solid #026593;
+  }
+
   .form__decoration {
-    display: block;
     left: 350px;
   }
 
@@ -3000,8 +3056,10 @@ button,
     max-width: 1920px;
   }
 
-  .services {
+  .services__wrapper {
     padding: 70px 350px 140px 350px;
+    max-width: 1920px;
+    margin: 0 auto;
   }
 
   .services__list {

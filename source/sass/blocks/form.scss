@@ -1,22 +1,12 @@
 .form {
   position: relative;
   background-color: $color-background-blue;
+}
+
+.form__big-wrapper {
+  position: relative;
+  box-sizing: border-box;
   padding: 50px 25px 85px 25px;
-
-  &::after {
-    display: none;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: 450px solid transparent;
-    border-left: 530px solid $color-triangle-grey;
-    border-top: 390px solid $color-triangle-grey;
-
-    @media (min-width: $vp-1440) {
-      display: block;
-    }
-  }
 
   @media (min-width: $vp-768) {
     padding: 50px 50px 125px 50px;
@@ -24,13 +14,39 @@
 
   @media (min-width: $vp-1024) {
     display: flex;
-    justify-content: center;
-    min-height: 840px;
-    padding: 0;
+    justify-content: flex-end;
+    margin: 0 auto;
   }
 
-  @media (min-width: $vp-1440) {
-    justify-content: flex-end;
+  @media (min-width: $vp-1920) {
+    max-width: 1920px;
+  }
+
+  &::before {
+    display: none;
+
+    @media (min-width: $vp-1024) {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 270px solid transparent;
+      border-left: 150px solid $color-trianle-grey;
+      border-top: 510px solid $color-trianle-grey;
+    }
+
+    @media (min-width: $vp-1440) {
+      border: 380px solid transparent;
+      border-left: 380px solid $color-trianle-grey;
+      border-top: 400px solid $color-trianle-grey;
+    }
+
+    @media (min-width: $vp-1920) {
+      border: 385px solid transparent;
+      border-left: 390px solid $color-trianle-grey;
+      border-top: 390px solid $color-trianle-grey;
+    }
   }
 }
 
@@ -40,13 +56,19 @@
   z-index: 2;
   top: 245px;
 
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     display: block;
     left: 100px;
+    width: 255px;
+    height: 145px;
+  }
+
+  @media (min-width: $vp-1440) {
+    width: 510px;
+    height: 285px;
   }
 
   @media (min-width: $vp-1920) {
-    display: block;
     left: 350px;
   }
 }

@@ -1,4 +1,5 @@
 .advantages {
+  box-sizing: border-box;
   padding: 50px 25px 25px 25px;
 
   @media (min-width: $vp-768) {
@@ -11,6 +12,8 @@
 
   @media (min-width: $vp-1920) {
     padding: 120px 350px 80px 350px;
+    max-width: 1920px;
+    margin: 0 auto;
   }
 }
 
