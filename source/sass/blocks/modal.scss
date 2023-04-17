@@ -38,7 +38,7 @@
     align-items: center;
     width: 100%;
     min-height: 100%;
-    padding: 20px 40px;
+    padding: 18px 40px;
 
     @include vp-767 {
       padding: 60px 16px;
@@ -60,7 +60,7 @@
     position: relative;
     background-color: $color-elements-blue;
     width: 500px;
-    padding: 40px;
+    padding: 32px 40px;
     box-sizing: border-box;
 
     @include vp-767 {
@@ -72,8 +72,8 @@
   &__close-btn {
     position: absolute;
     outline: none;
-    top: 22px;
-    right: 22px;
+    top: 18px;
+    right: 18px;
     z-index: 1;
 
     width: 40px;
@@ -93,7 +93,7 @@
 
     &:focus {
       border-radius: 10px;
-      border: 1px solid white;
+      border: 1px solid $color-default-white;
     }
   }
 
@@ -136,12 +136,7 @@
   line-height: 42px;
   color: $color-default-white;
   margin-top: 0;
-  margin-bottom: 15px;
-
-  @media (min-width: $vp-768) {
-    font-size: 36px;
-    line-height: 51px;
-  }
+  margin-bottom: 6px;
 }
 
 .modal__text {
@@ -153,7 +148,7 @@
   margin-bottom: 30px;
 
   @media (min-width: $vp-768) {
-    margin-bottom: 35px;
+    margin-bottom: 36px;
     font-size: 16px;
     line-height: 22px;
   }
@@ -171,7 +166,7 @@
   textarea {
     cursor: text;
     font-family: "PT Mono", "Arial", sans-serif;
-    padding: 13px 15px;
+    padding: 15px 15px;
     font-size: 16px;
     line-height: 22px;
     background: $color-input-background;
@@ -201,7 +196,8 @@
 
   textarea {
     width: 100%;
-    margin-bottom: 5px;
+    margin-bottom: -5px;
+    height: 154px;
   }
 }
 
@@ -209,7 +205,7 @@
   display: block;
   cursor: pointer;
   user-select: none;
-  padding: 15px 25px;
+  padding: 13px 25px;
   width: 100%;
   box-sizing: border-box;
   background-color: $color-header-dark;
@@ -235,7 +231,7 @@
 .modal__ending-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  margin-top: 5px;
 }
 
 .modal__button-wrapper {
@@ -243,5 +239,6 @@
 }
 
 .modal__checkbox-wrapper {
+  margin-top: 5px;
   order: 2;
 }

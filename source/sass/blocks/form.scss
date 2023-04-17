@@ -10,7 +10,7 @@
   background-color: $color-background-blue;
 
   @media (min-width: $vp-768) {
-    padding: 50px 50px 125px 50px;
+    padding: 50px 50px 120px 50px;
   }
 
   @media (min-width: $vp-1024) {
@@ -183,8 +183,9 @@
     }
 
     @media (min-width: $vp-1024) {
-      height: auto;
-      margin-bottom: 10px;
+      padding-top: 24px;
+      height: 158px;
+      margin-bottom: 25px;
     }
   }
 }
@@ -224,7 +225,7 @@
   order: 1;
 }
 
-.form__checkbox__wrapper {
+.form__checkbox-wrapper {
   order: 2;
 }
 

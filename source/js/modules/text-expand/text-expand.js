@@ -9,16 +9,18 @@ const textToggle = () => {
     if (window.innerWidth >= 768) {
       hiddenText.style.height = `${hiddenText.previousElementSibling.clientHeight}px`;
     } else {
-      hiddenText.style.height = '340px';
+      hiddenText.style.height = `${hiddenText.previousElementSibling.clientHeight * 1.65}px`;
     }
     if (window.innerWidth < 768) {
-      mobileHiddenText.style.height = '130px';
+      mobileHiddenText.style.display = 'block';
+      mobileHiddenText.style.height = `${hiddenText.previousElementSibling.clientHeight * 0.7}px`;
     }
   } else {
     expandButton.classList.remove('is-opened');
     expandButton.classList.add('is-closed');
     hiddenText.style.height = null;
     if (window.innerWidth < 768) {
+      mobileHiddenText.style.display = 'none';
       mobileHiddenText.style.height = null;
     } else {
       mobileHiddenText.style.display = 'block';

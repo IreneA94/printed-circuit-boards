@@ -4,6 +4,10 @@
   @media (min-width: $vp-768) {
     margin: 10px;
   }
+
+  @media (min-width: $vp-1024) {
+    margin-top: 15px;
+  }
 }
 
 .checkbox__label {
